@@ -1,0 +1,15 @@
+@import "./Utils/variables";
+@import "./Utils/mixins";
+@import "./Utils/fonctions";
+@import "./Base/font";
+@import "./Base/background";
+@import "./Composants/bouton";
+@import "./Composants/foodBox";
+@import "./Layout (mise en page)/header";
+@import "./Layout (mise en page)/footer";
+
+body{
+    color:$couleurprincipal;
+}
+
+

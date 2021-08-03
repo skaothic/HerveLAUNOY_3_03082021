@@ -1,0 +1,18 @@
+{
+    "version": 3,
+    "mappings": "AQAA,AAAA,MAAM,CAAA;EACF,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;CACtB;;ARMD,AAAA,IAAI,CAAA;EACA,KAAK,ECXU,OAAO;CDYzB",
+    "sources": [
+        "style.scss",
+        "Utils/_variables.scss",
+        "Utils/_mixins.scss",
+        "Utils/_fonctions.scss",
+        "Base/_font.scss",
+        "Base/_background.scss",
+        "Composants/_bouton.scss",
+        "Composants/_foodBox.scss",
+        "Layout (mise en page)/_header.scss",
+        "Layout (mise en page)/_footer.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
