@@ -5,11 +5,6 @@
 @import "./Base/background";
 @import "./Composants/bouton";
 @import "./Composants/foodBox";
-@import "./Layout (mise en page)/header";
-@import "./Layout (mise en page)/footer";
-
-body{
-    color:$couleurprincipal;
-}
-
-
+@import "./Layout/images";
+@import "./Layout/header";
+@import "./Layout/footer";

@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AQAA,AAAA,MAAM,CAAA;EACF,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;CACtB;;ARMD,AAAA,IAAI,CAAA;EACA,KAAK,ECXU,OAAO;CDYzB",
+    "mappings": "AIAA,AAAA,CAAC,CAAA;EACG,WAAW,EAAE,MAAM;CACtB;;AACD,AAAA,EAAE,CAAA;EACE,WAAW,EAAE,SAAS;CACzB;;AILD,AAAA,MAAM,CAAA;EACF,eAAe,EAAE,KAAK;EACtB,mBAAmB,EAAE,MAAM;CAC9B;;AACD,AAAA,QAAQ,CAAA;EACJ,gBAAgB,EAAC,gBAAgB;EACjC,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;CACZ;;ACRL,AAAA,MAAM,CAAA;EACF,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;CACtB;;ACJD,AAAA,MAAM,CAAA;EACF,gBAAgB,ETD8B,OAAO;ESErD,KAAK,EAAC,KAAK;CACd",
     "sources": [
         "style.scss",
         "Utils/_variables.scss",
@@ -10,8 +10,9 @@
         "Base/_background.scss",
         "Composants/_bouton.scss",
         "Composants/_foodBox.scss",
-        "Layout (mise en page)/_header.scss",
-        "Layout (mise en page)/_footer.scss"
+        "Layout/_images.scss",
+        "Layout/_header.scss",
+        "Layout/_footer.scss"
     ],
     "names": [],
     "file": "style.css"
