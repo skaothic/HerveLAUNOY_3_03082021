@@ -10,25 +10,18 @@
       crossorigin="anonymous"
     ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet"/>
   </head>
   <body>
     <header>
-      <p id="logoBoxTitre">
+      <div id="logoBoxTitre">
         <img src="images\logo\ohmyfood@2x.svg" alt="logoOMyFood" />
-      </p>
+      </div>
       <form method="POST" action="#" class="locate">
-        <i class="fas fa-map-marker-alt"></i>
+        <i class="fas fa-map-marker-alt marker"></i>
         <input
           type="text"
           name="location"
@@ -36,12 +29,12 @@
           id="location"
         />
       </form>
-      <h1>Réservez le menu qui vous convient</h1>
+      <h2 id="titre">Réservez le menu qui vous convient</h2>
       <p>Découvrez des restaurants d'excepetion,séléctionnés par nos soins.</p>
-      <p id="Explore">Explorez nos restaurants</p>
+      <a href=#resto><button id="Explore">Explorez nos restaurants</button></a>
     </header>
     <aside>
-      <h1>Fonctionnement</h1>
+      <h2>Fonctionnement</h2>
       <ul>
         <li>
           <span class="number">1</span>
@@ -61,7 +54,7 @@
       </ul>
     </aside>
     <section id="main">
-      <h1>Restaurants</h1>
+      <h2 id=resto>Restaurants</h2>
       <div class="cartes">
       <div class="carte">
         <a href=Palette.html>
@@ -79,7 +72,7 @@
         </div>
         <div class="carte">
             <a href=note.html>
-        <div class="bckgd">
+        <div class="bckgd" id="note">
           <p>Nouveau</p>
         </div>
         <div class="Desc">
@@ -93,7 +86,7 @@
         </div>
         <div class="carte">
             <a href=française.html>
-        <div class="bckgd"></div>
+        <div class="bckgd" id="française"></div>
         <div class="Desc">
           <div class="Resto">
             <p class="name">À la française</p>
@@ -119,7 +112,7 @@
     </section>
     <footer>
       <p id="logoBoxFooter">
-        <img src="images\logo\ohmyfood@2x.svg" alt="logoOMyFood" />
+       <h1>ohmyfood</h1>
       </p>
       <ul>
         <li>

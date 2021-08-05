@@ -2,4 +2,25 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f6f6f6;
+}
+#logoBoxTitre{
+    width: 100%;
+    background-color: white;
+}
+form{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: #EAEAEA;
+    >input{
+        width: 40%;
+        height: 100%;
+        background-color: #EAEAEA;
+        border:none;
+        font-size: 25px;
+        font-weight: bold;
+        margin-left: 20px;
+    }
 }

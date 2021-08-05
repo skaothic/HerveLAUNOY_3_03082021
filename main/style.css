@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: roboto;
 }
@@ -6,15 +7,56 @@ h1 {
   font-family: Shrikhand;
 }
 
+h2 {
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+h2#titre {
+  font-size: 2.5em;
+  width: 50%;
+  text-align: center;
+}
+
+p {
+  font-size: 25px;
+}
+
+.marker {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 25px;
+}
+
 .bckgd {
   background-size: cover;
   background-position: center;
+  width: 100%;
+  height: 250px;
 }
 
 #palette {
   background-image: url(Palette.jpg);
-  width: 100%;
-  height: 250px;
+}
+
+#note {
+  background-image: url(Note.jpg);
+}
+
+#française {
+  background-image: url(Française.jpg);
+}
+
+#Délice {
+  background-image: url(délice.jpg);
+}
+
+img {
+  width: 50%;
+  position: relative;
+  display: block;
+  margin: 15px auto;
 }
 
 header {
@@ -28,6 +70,34 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #f6f6f6;
+}
+
+#logoBoxTitre {
+  width: 100%;
+  background-color: white;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 50px;
+  background-color: #EAEAEA;
+}
+
+form > input {
+  width: 40%;
+  height: 100%;
+  background-color: #EAEAEA;
+  border: none;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 20px;
 }
 
 footer {
