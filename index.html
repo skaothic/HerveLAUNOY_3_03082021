@@ -25,40 +25,42 @@
         <input
           type="text"
           name="location"
-          value="Paris,Belleville"
-          id="location"
+          value="Paris, Belleville"
+          class="form__input"
         />
       </form>
-      <h2 id="titre">Réservez le menu qui vous convient</h2>
-      <p>Découvrez des restaurants d'excepetion,séléctionnés par nos soins.</p>
-      <a href=#resto><button id="Explore">Explorez nos restaurants</button></a>
+      <h2 class="header__titre">Réservez le menu qui vous convient</h2>
+      <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+      <a href=#resto class="a__button"><button>Explorez nos restaurants</button></a>
     </header>
     <aside>
       <h2>Fonctionnement</h2>
       <ul>
-        <li>
-          <span class="number">1</span>
-          <i class="fas fa-mobile-alt"></i>
-          Choisissez un restaurant
+        <li class="li">
+          <span class="li__number">1</span>
+          <i class="fas fa-mobile-alt li__logo"></i>
+          <span class="li__desc">Choisissez un restaurant</span>
         </li>
-        <li>
-          <span class="number">2</span>
-          <i class="fas fa-list-ul"></i>
-          Composez votre menu
+        <li class="li">
+
+          <span class="li__number">2</span>
+          <i class="fas fa-list-ul li__logo"></i>
+          <span class="li__desc">Composez votre menu</span>
         </li>
-        <li>
-          <span class="number">3</span>
-          <i class="fas fa-store"></i>
-          Dégustez au restaurant
+        <li class="li">
+
+          <span class="li__number">3</span>
+          <i class="fas fa-store li__logo"></i>
+          <span class="li__desc">Dégustez au restaurant</span>
         </li>
       </ul>
     </aside>
-    <section id="main">
-      <h2 id=resto>Restaurants</h2>
-      <div class="cartes">
+    <section class="main">
+      <h2 class="main__resto">Restaurants</h2>
+      <div class="main__cartes">
       <div class="carte">
         <a href=Palette.html>
-          <div class="bckgd" id="palette">
+          <div class="carte__bckgd--palette">
             <p>Nouveau</p>
           </div>
           <div class="Desc">
@@ -72,7 +74,7 @@
         </div>
         <div class="carte">
             <a href=note.html>
-        <div class="bckgd" id="note">
+        <div class="carte__bckgd--note">
           <p>Nouveau</p>
         </div>
         <div class="Desc">
@@ -86,7 +88,7 @@
         </div>
         <div class="carte">
             <a href=française.html>
-        <div class="bckgd" id="française"></div>
+        <div class="carte__bckgd--française"></div>
         <div class="Desc">
           <div class="Resto">
             <p class="name">À la française</p>
@@ -98,7 +100,7 @@
         </div>
         <div class="carte">
             <a href=délice.html>
-        <div class="bckgd" id="Délice"></div>
+        <div class="carte__bckgd--délice"></div>
         <div class="Desc">
           <div class="Resto">
             <p class="name">Le délice des sens</p>
@@ -111,20 +113,18 @@
       </div>
     </section>
     <footer>
-      <p id="logoBoxFooter">
        <h1>ohmyfood</h1>
-      </p>
       <ul>
-        <li>
-          <i class="fas fa-utensils"></i>
-          Proposer un restaurant
-        </li>
-        <li>
-          <i class="fas fa-hands-helping"></i>
-          Devenir partenaire
-        </li>
-        <li>Mentions légales</li>
-        <li>Contact</li>
+          <li class="li">
+            <i class="fas fa-utensils"></i>
+              Proposer un restaurant
+          </li>
+          <li class="li">
+            <i class="fas fa-hands-helping"></i>
+            Devenir partenaire
+          </li>
+          <li class="li">Mentions légales</li>
+          <li class="li">Contact</li>
       </ul>
     </footer>
   </body>

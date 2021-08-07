@@ -2,7 +2,17 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f6f6f6;
+    background-color:map-get($color,bckgd);
+    height: 20%;
+    >p{
+        font-size:40px;
+        font-weight: 300;
+        text-align: center;
+        margin: 20px 10% 45px;
+    }
+    >h2{
+        margin:80px 20% 20px;
+    }
 }
 #logoBoxTitre{
     width: 100%;
@@ -12,15 +22,26 @@ form{
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 50px;
+    height: 90px;
     background-color: #EAEAEA;
+    box-shadow: 0px 5px 10px #cecece inset;
     >input{
         width: 40%;
-        height: 100%;
+        height: 99%;
         background-color: #EAEAEA;
         border:none;
-        font-size: 25px;
-        font-weight: bold;
+        font-size: 35px;
+        font-weight: 600;
         margin-left: 20px;
+        box-shadow: 0px 5px 10px #cecece inset;
+
     }
+    >.marker{
+        font-size: 35px;
+        margin: 0 25px;
+    }
+}
+.a__button{
+    margin:0 10%;
+    @include button;
 }
