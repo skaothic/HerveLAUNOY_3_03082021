@@ -5,6 +5,10 @@
 
 h1 {
   font-family: Shrikhand;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
 }
 
 h2 {
@@ -47,7 +51,7 @@ button {
 .carte__bckgd--palette {
   background-image: url(Palette.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   width: 100%;
   height: 450px;
   border-radius: 40px 40px 0 0;
@@ -56,16 +60,17 @@ button {
 .carte__bckgd--note {
   background-image: url(Note.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   width: 100%;
   height: 450px;
   border-radius: 40px 40px 0 0;
+  background-position: center;
 }
 
 .carte__bckgd--française {
   background-image: url(Française.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   width: 100%;
   height: 450px;
   border-radius: 40px 40px 0 0;
@@ -74,7 +79,7 @@ button {
 .carte__bckgd--délice {
   background-image: url(délice.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   width: 100%;
   height: 450px;
   border-radius: 40px 40px 0 0;
@@ -220,7 +225,7 @@ aside .li:hover .li__logo {
 
 .main {
   background-color: #f6f6f6;
-  padding-top: 80px;
+  padding: 80px 0;
 }
 
 .main__cartes {
@@ -230,6 +235,7 @@ aside .li:hover .li__logo {
 .carte {
   border-radius: 40px;
   background-color: white;
+  margin-bottom: 50px;
 }
 
 .carte .new {
@@ -262,23 +268,62 @@ aside .li:hover .li__logo {
   padding: 0 5%;
 }
 
+.carte .desc .fa-heart {
+  height: 60px;
+  width: 60px;
+  font-size: 60px;
+}
+
+.carte .desc .fa-heart.liked {
+  display: none;
+}
+
+.carte .desc .fa-heart.unliked:hover {
+  display: none;
+}
+
+.carte .desc .fa-heart.unliked:hover + .liked {
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  display: block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .carte .desc .name {
-  font-weight: 800;
+  font-weight: 600;
   margin-bottom: 15px;
 }
 
 .carte .desc .quartier {
   font-weight: 300;
-  margin-top: 15px;
-}
-
-.carte .desc .resto {
-  width: 50%;
+  margin: 15px 0 20px;
 }
 
 footer {
   background-color: #353535;
   color: white;
+  padding: 30px;
+}
+
+footer h1 {
+  font-weight: 100;
+  font-size: 55px;
+}
+
+footer ul {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  font-size: 35px;
+}
+
+footer ul i {
+  width: 50px;
 }
 
 body {

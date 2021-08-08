@@ -5,6 +5,7 @@
 .carte__bckgd--note{
     background-image: url(Note.jpg);
     @include bckgd;
+    background-position:center;
 }
 .carte__bckgd--française{
     background-image: url(Française.jpg);    

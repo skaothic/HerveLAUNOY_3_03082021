@@ -1,6 +1,6 @@
 .main{
     background-color: map-get($color,bckgd);
-    padding-top: 80px;
+    padding: 80px 0;
     &__cartes{
         padding:0 30px;
     }
@@ -8,6 +8,7 @@
 .carte{
     border-radius:$radius;
     background-color:white;
+    margin-bottom: 50px;
      .new{
         color: white;
         background-color:map-get($color,3m);
@@ -27,16 +28,31 @@
         align-items: center;
         font-size: 40px;
         padding: 0 5%;
+        .fa-heart{
+            height:60px;
+            width: 60px;
+            font-size: 60px;
+            &.liked{
+                display:none;
+            }
+            &.unliked:hover{
+                display:none;
+                +.liked{
+                    background: linear-gradient(to top left,map-get($color,1er),map-get($color,2m));                 
+                    display:block;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+            }
+        }
         .name{
-            font-weight:800 ;
+            font-weight:600 ;
             margin-bottom: 15px;
         }
         .quartier{
             font-weight: 300;
-            margin-top: 15px;
-        }
-        .resto{
-            width: 50%;
+            margin: 15px 0 20px;
         }
     }
 }
