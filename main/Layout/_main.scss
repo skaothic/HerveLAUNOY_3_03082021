@@ -1,0 +1,42 @@
+.main{
+    background-color: map-get($color,bckgd);
+    padding-top: 80px;
+    &__cartes{
+        padding:0 30px;
+    }
+}
+.carte{
+    border-radius:$radius;
+    background-color:white;
+     .new{
+        color: white;
+        background-color:map-get($color,3m);
+        width: fit-content;
+        padding:15px 25px;
+        font-size: 30px;
+        font-weight: 500;
+        border-radius: 5px;
+        color:#008766 ;
+        position:relative;
+        top:25px;
+        left:730px;
+    }
+    .desc{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 40px;
+        padding: 0 5%;
+        .name{
+            font-weight:800 ;
+            margin-bottom: 15px;
+        }
+        .quartier{
+            font-weight: 300;
+            margin-top: 15px;
+        }
+        .resto{
+            width: 50%;
+        }
+    }
+}

@@ -21,6 +21,7 @@ h2.header__titre {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 li {
@@ -48,7 +49,8 @@ button {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 250px;
+  height: 450px;
+  border-radius: 40px 40px 0 0;
 }
 
 .carte__bckgd--note {
@@ -56,7 +58,8 @@ button {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 250px;
+  height: 450px;
+  border-radius: 40px 40px 0 0;
 }
 
 .carte__bckgd--française {
@@ -64,7 +67,8 @@ button {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 250px;
+  height: 450px;
+  border-radius: 40px 40px 0 0;
 }
 
 .carte__bckgd--délice {
@@ -72,7 +76,8 @@ button {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 250px;
+  height: 450px;
+  border-radius: 40px 40px 0 0;
 }
 
 img {
@@ -94,7 +99,6 @@ header {
       -ms-flex-align: center;
           align-items: center;
   background-color: #f6f6f6;
-  height: 20%;
 }
 
 header > p {
@@ -128,15 +132,15 @@ form {
 }
 
 form > input {
-  width: 40%;
-  height: 99%;
+  width: 30%;
+  height: 80%;
   background-color: #EAEAEA;
   border: none;
   font-size: 35px;
   font-weight: 600;
   margin-left: 20px;
-  -webkit-box-shadow: 0px 5px 10px #cecece inset;
-          box-shadow: 0px 5px 10px #cecece inset;
+  position: relative;
+  top: 12px;
 }
 
 form > .marker {
@@ -157,16 +161,22 @@ form > .marker {
 }
 
 aside {
-  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 aside ul {
-  height: 90%;
+  margin-bottom: 80px;
 }
 
 aside .li {
   background: #f6f6f6;
-  height: 30%;
+  height: 150px;
   margin: 20px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -188,10 +198,6 @@ aside .li__logo {
   color: #7e7e7e;
 }
 
-aside .li__logo:hover {
-  color: #9356DC;
-}
-
 aside .li__number {
   background-color: #9356DC;
   color: white;
@@ -206,6 +212,68 @@ aside .li__number {
 
 aside .li:hover {
   background-color: #f5edff;
+}
+
+aside .li:hover .li__logo {
+  color: #9356DC;
+}
+
+.main {
+  background-color: #f6f6f6;
+  padding-top: 80px;
+}
+
+.main__cartes {
+  padding: 0 30px;
+}
+
+.carte {
+  border-radius: 40px;
+  background-color: white;
+}
+
+.carte .new {
+  color: white;
+  background-color: #99E2D0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px 25px;
+  font-size: 30px;
+  font-weight: 500;
+  border-radius: 5px;
+  color: #008766;
+  position: relative;
+  top: 25px;
+  left: 730px;
+}
+
+.carte .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 40px;
+  padding: 0 5%;
+}
+
+.carte .desc .name {
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.carte .desc .quartier {
+  font-weight: 300;
+  margin-top: 15px;
+}
+
+.carte .desc .resto {
+  width: 50%;
 }
 
 footer {
