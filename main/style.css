@@ -9,18 +9,29 @@ h1 {
           margin-block-start: 0;
   -webkit-margin-after: 0;
           margin-block-end: 0;
+  font-weight: 100;
+  font-size: 35px;
 }
 
 h2 {
-  font-size: 45px;
+  font-size: 25px;
   font-weight: 600;
-  padding-left: 30px;
 }
 
 h2.header__titre {
-  font-size: 50px;
-  text-align: center;
-  padding-left: 0;
+  font-size: 27px;
+}
+
+h3 {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.fa-arrow-left {
+  font-size: 30px;
+  padding-left: 15px;
 }
 
 a {
@@ -28,17 +39,61 @@ a {
   color: black;
 }
 
+.a__foot {
+  color: white;
+}
+
+button {
+  font-size: 16px;
+  font-weight: 600;
+}
+
 li {
   list-style: none;
+  font-size: 16px;
+}
+
+li.li {
+  font-weight: 500;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+form > input, form > .marker {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.carte .new {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.carte .desc {
+  font-size: 40px;
+}
+
+.carte .desc .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.carte .desc .quartier {
+  font-weight: 300;
 }
 
 button {
   color: white;
   background: none;
   border: none;
-  font-size: 30px;
-  padding: 21px 0;
-  font-weight: 500;
+  padding: 15px 0;
 }
 
 .marker {
@@ -49,47 +104,75 @@ button {
 }
 
 .carte__bckgd--palette {
-  background-image: url(Palette.jpg);
   background-size: cover;
   background-position: bottom;
   width: 100%;
-  height: 450px;
-  border-radius: 40px 40px 0 0;
+  height: 180px;
+  border-radius: 20px 20px 0 0;
+  background-image: url(Palette.jpg);
 }
 
 .carte__bckgd--note {
-  background-image: url(Note.jpg);
   background-size: cover;
   background-position: bottom;
   width: 100%;
-  height: 450px;
-  border-radius: 40px 40px 0 0;
+  height: 180px;
+  border-radius: 20px 20px 0 0;
+  background-image: url(Note.jpg);
   background-position: center;
 }
 
 .carte__bckgd--française {
-  background-image: url(Française.jpg);
   background-size: cover;
   background-position: bottom;
   width: 100%;
-  height: 450px;
-  border-radius: 40px 40px 0 0;
+  height: 180px;
+  border-radius: 20px 20px 0 0;
+  background-image: url(Française.jpg);
 }
 
 .carte__bckgd--délice {
-  background-image: url(délice.jpg);
   background-size: cover;
   background-position: bottom;
   width: 100%;
-  height: 450px;
-  border-radius: 40px 40px 0 0;
+  height: 180px;
+  border-radius: 20px 20px 0 0;
+  background-image: url(délice.jpg);
+}
+
+.bckgdresto__palette {
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  background-image: url(palette.jpg);
+}
+
+.bckgdresto__note {
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  background-image: url(note.jpg);
+}
+
+.bckgdresto__délice {
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  background-image: url(délice.jpg);
+}
+
+.bckgdresto__française {
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  background-image: url(française.jpg);
 }
 
 img {
-  width: 50%;
-  position: relative;
+  width: 45%;
   display: block;
-  margin: 15px auto;
+  margin: auto;
+  height: 100%;
 }
 
 header {
@@ -106,20 +189,39 @@ header {
   background-color: #f6f6f6;
 }
 
+header.palette, header.note, header.francaise, header.delice {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: white;
+}
+
 header > p {
-  font-size: 40px;
-  font-weight: 300;
   text-align: center;
-  margin: 20px 10% 45px;
+  margin: 20px 5% 45px;
 }
 
 header > h2 {
-  margin: 80px 20% 20px;
+  margin: 35px 11% 5px;
+  text-align: center;
+  padding-left: 0;
 }
 
-#logoBoxTitre {
-  width: 100%;
+.logoBox {
+  height: 70px;
+  width: 95%;
+}
+
+.logoBox.Titre {
   background-color: white;
+}
+
+.logoBox.Resto {
+  margin: 0;
 }
 
 form {
@@ -130,39 +232,49 @@ form {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  height: 90px;
+  height: 55px;
   background-color: #EAEAEA;
   -webkit-box-shadow: 0px 5px 10px #cecece inset;
           box-shadow: 0px 5px 10px #cecece inset;
 }
 
 form > input {
-  width: 30%;
-  height: 80%;
+  width: 40%;
+  height: 50%;
   background-color: #EAEAEA;
   border: none;
-  font-size: 35px;
-  font-weight: 600;
-  margin-left: 20px;
+  margin-left: 10px;
   position: relative;
-  top: 12px;
+  top: 25%;
 }
 
 form > .marker {
-  font-size: 35px;
-  margin: 0 25px;
+  margin: 0 10px;
 }
 
 .a__button {
   margin: 0 10%;
-  width: 50%;
-  height: 80px;
+  width: 60%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: #9356DC;
-  -webkit-box-shadow: #FF79DA 30px 30px 50px inset;
-          box-shadow: #FF79DA 30px 30px 50px inset;
+  -webkit-box-shadow: #FF79DA 30px 30px 50px inset, 10px 10px 10px #dddddd;
+          box-shadow: #FF79DA 30px 30px 50px inset, 10px 10px 10px #dddddd;
   border-radius: 40px;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
+}
+
+.a__button:hover {
+  background-color: #ae80e5;
+  -webkit-box-shadow: #fface8 30px 30px 50px inset, 10px 10px 10px #aaaaaa;
+          box-shadow: #fface8 30px 30px 50px inset, 10px 10px 10px #aaaaaa;
+  cursor: url(https://img.icons8.com/material-sharp/24/000000/search.png), pointer;
+}
+
+button:hover {
+  cursor: url(https://img.icons8.com/material-sharp/24/000000/search.png), pointer;
 }
 
 aside {
@@ -175,13 +287,17 @@ aside {
           flex-direction: column;
 }
 
+aside h2 {
+  padding: 20px 30px 0px;
+  margin-bottom: 0;
+}
+
 aside ul {
-  margin-bottom: 80px;
+  margin: 10px 0px 35px;
 }
 
 aside .li {
   background: #f6f6f6;
-  height: 150px;
   margin: 20px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -189,16 +305,17 @@ aside .li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 40px;
-  -webkit-box-shadow: 10px 10px 10px #e5e5e5;
-          box-shadow: 10px 10px 10px #e5e5e5;
-  border-radius: 40px;
+  border-radius: 20px;
   width: 90%;
+  padding: 25px 0;
+  -webkit-box-shadow: 10px 10px 10px #dddddd;
+          box-shadow: 10px 10px 10px #dddddd;
 }
 
 aside .li__logo {
-  margin: 0 30px;
-  width: 50px;
+  margin-right: 25px;
+  width: 15px;
+  font-size: 20px;
   text-align: center;
   color: #7e7e7e;
 }
@@ -206,17 +323,17 @@ aside .li__logo {
 aside .li__number {
   background-color: #9356DC;
   color: white;
-  width: 60px;
-  height: 55px;
   text-align: center;
-  border-radius: 30px;
-  padding-top: 5px;
-  position: relative;
-  left: -30px;
+  border-radius: 50%;
+  padding: 2px 7px;
+  margin: 0 25px 0 -10px;
 }
 
 aside .li:hover {
-  background-color: #f5edff;
+  background-color: #ece1f9;
+  -webkit-box-shadow: 10px 10px 10px #aaaaaa;
+          box-shadow: 10px 10px 10px #aaaaaa;
+  cursor: pointer;
 }
 
 aside .li:hover .li__logo {
@@ -225,7 +342,11 @@ aside .li:hover .li__logo {
 
 .main {
   background-color: #f6f6f6;
-  padding: 80px 0;
+  padding: 45px 0 20px;
+}
+
+.main__resto {
+  padding-left: 30px;
 }
 
 .main__cartes {
@@ -233,9 +354,13 @@ aside .li:hover .li__logo {
 }
 
 .carte {
-  border-radius: 40px;
+  border-radius: 20px;
   background-color: white;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+.carte a:hover {
+  cursor: url(https://img.icons8.com/fluency/32/000000/restaurant.png), pointer;
 }
 
 .carte .new {
@@ -244,14 +369,12 @@ aside .li:hover .li__logo {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 15px 25px;
-  font-size: 30px;
-  font-weight: 500;
-  border-radius: 5px;
+  padding: 5px 15px;
+  border-radius: 2px;
   color: #008766;
   position: relative;
-  top: 25px;
-  left: 730px;
+  top: 9%;
+  left: 70%;
 }
 
 .carte .desc {
@@ -264,25 +387,19 @@ aside .li:hover .li__logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 40px;
   padding: 0 5%;
+  font-size: 40px;
 }
 
-.carte .desc .fa-heart {
-  height: 60px;
-  width: 60px;
-  font-size: 60px;
-}
-
-.carte .desc .fa-heart.liked {
+.carte .desc .liked {
   display: none;
 }
 
-.carte .desc .fa-heart.unliked:hover {
+.carte .desc .unliked:hover {
   display: none;
 }
 
-.carte .desc .fa-heart.unliked:hover + .liked {
+.carte .desc .unliked:hover + .liked {
   background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   display: block;
@@ -291,39 +408,96 @@ aside .li:hover .li__logo {
   color: transparent;
 }
 
+.carte .desc:hover {
+  cursor: pointer;
+}
+
 .carte .desc .name {
-  font-weight: 600;
-  margin-bottom: 15px;
+  margin: 10px 0 5px;
 }
 
 .carte .desc .quartier {
-  font-weight: 300;
-  margin: 15px 0 20px;
+  margin-bottom: 10px;
+}
+
+.menu {
+  width: 100%;
+  border-radius: 50px;
+  background-color: #f6f6f6;
+  position: relative;
+  top: -40px;
+}
+
+.menu h1 {
+  padding: 35px 0;
+  font-size: 35px;
+}
+
+.menu__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 40px;
+}
+
+.menu__title .liked {
+  display: none;
+}
+
+.menu__title .unliked:hover {
+  display: none;
+}
+
+.menu__title .unliked:hover + .liked {
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  display: block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.menu > span {
+  font-size: 20px;
+  margin-left: 40px;
+  border-bottom: #008766 4px solid;
+}
+
+.menu > ul {
+  width: 90%;
+}
+
+.menu li {
+  background-color: white;
+  margin: 10px 0;
+  border-radius: 20px;
 }
 
 footer {
   background-color: #353535;
   color: white;
-  padding: 30px;
-}
-
-footer h1 {
-  font-weight: 100;
-  font-size: 55px;
+  padding: 6%;
+  height: 20%;
 }
 
 footer ul {
-  -webkit-margin-before: 0;
-          margin-block-start: 0;
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
-  -webkit-padding-start: 0;
-          padding-inline-start: 0;
-  font-size: 35px;
+  width: 85%;
+  margin-left: 0;
+  padding-left: 0;
 }
 
-footer ul i {
-  width: 50px;
+footer ul li {
+  height: 10px;
+  padding: 10px 0;
+}
+
+footer ul .fas {
+  width: 20px;
 }
 
 body {

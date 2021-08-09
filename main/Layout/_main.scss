@@ -1,6 +1,9 @@
 .main{
     background-color: map-get($color,bckgd);
-    padding: 80px 0;
+    padding: 45px 0 20px;
+    &__resto{
+        padding-left:30px;
+    }
     &__cartes{
         padding:0 30px;
     }
@@ -8,51 +11,65 @@
 .carte{
     border-radius:$radius;
     background-color:white;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    & a:hover{
+        cursor:url(https://img.icons8.com/fluency/32/000000/restaurant.png),pointer;
+    }
      .new{
         color: white;
         background-color:map-get($color,3m);
         width: fit-content;
-        padding:15px 25px;
-        font-size: 30px;
-        font-weight: 500;
-        border-radius: 5px;
-        color:#008766 ;
-        position:relative;
-        top:25px;
-        left:730px;
+        padding:5px 15px;
+        border-radius: 2px;
+        color:#008766;
+        position: relative;
+        top:9%;
+        left:70%;
     }
     .desc{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: 40px;
         padding: 0 5%;
-        .fa-heart{
-            height:60px;
-            width: 60px;
-            font-size: 60px;
-            &.liked{
-                display:none;
-            }
-            &.unliked:hover{
-                display:none;
-                +.liked{
-                    background: linear-gradient(to top left,map-get($color,1er),map-get($color,2m));                 
-                    display:block;
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    color: transparent;
-                }
-            }
+        @include heart;
+        &:hover{
+            cursor: pointer;
         }
         .name{
-            font-weight:600 ;
-            margin-bottom: 15px;
+            margin: 10px 0 5px;
         }
         .quartier{
-            font-weight: 300;
-            margin: 15px 0 20px;
+            margin-bottom: 10px;
         }
+    }
+}
+.menu{
+    width: 100%;
+    border-radius: 50px;
+    background-color: map-get($color,bckgd);
+    position: relative;
+    top: -40px;
+    h1{
+        padding:35px 0;
+        font-size: 35px;
+    }
+    &__title{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        @include heart;
+    }
+    >span{
+        font-size: 20px;
+        margin-left:40px;
+        border-bottom: #008766 4px solid;
+    }
+    >ul{
+        width: 90%;    
+    }
+    li{
+        background-color: white;
+        margin: 10px 0;
+        border-radius: $radius;
     }
 }

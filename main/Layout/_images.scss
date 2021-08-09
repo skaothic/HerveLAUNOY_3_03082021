@@ -1,23 +1,40 @@
-.carte__bckgd--palette{
+.carte__bckgd{
+    &--palette{
+    @include bckgd;
     background-image:url(Palette.jpg);
+    }
+    &--note{
     @include bckgd;
-}
-.carte__bckgd--note{
     background-image: url(Note.jpg);
-    @include bckgd;
     background-position:center;
-}
-.carte__bckgd--française{
+    }
+    &--française{
+    @include bckgd;
     background-image: url(Française.jpg);    
+    }
+    &--délice{
     @include bckgd;
-}
-.carte__bckgd--délice{
     background-image: url(délice.jpg);
-    @include bckgd;
+    }
+}
+.bckgdresto{
+    &__palette{
+        @include bckgdresto;
+        background-image: url(palette.jpg);
+    }&__note{
+        @include bckgdresto;
+        background-image: url(note.jpg);
+    }&__délice{
+        @include bckgdresto;
+        background-image: url(délice.jpg);
+    }&__française{
+        @include bckgdresto;
+        background-image: url(française.jpg);
+    }
 }
 img{
-    width: 50%;
-    position:relative;
+    width: 45%;
     display: block;
-    margin: 15px auto;
+    margin:auto;
+    height: 100%;
 }

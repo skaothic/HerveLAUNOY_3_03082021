@@ -2,15 +2,48 @@
         background-size: cover;
         background-position: bottom;
         width: 100%;
-        height: 450px;
+        height: 180px;
         border-radius: $radius $radius 0 0;  
 }
+@mixin bckgdresto{
+        background-size: cover;
+        width:100%;
+        height: 300px;
+}
+@mixin shadow {
+        box-shadow: 10px 10px 10px darken(map-get($color,bckgd), $amount: 10);
+}
+@mixin shadow-hover{
+        box-shadow: 10px 10px 10px darken(map-get($color,bckgd), $amount: 30);
+}
 @mixin button {
-        width: 50%;
-        height: 80px;
+        width: 60%;
+        height: fit-content;
         background-color:map-get($color,1er);
-        box-shadow: map-get($color,2m) 30px 30px 50px inset;
+        box-shadow:map-get($color,2m) 30px 30px 50px inset,10px 10px 10px darken(map-get($color,bckgd), $amount: 10);
         border-radius: 40px;
         text-align: center;
-        margin-bottom: 100px;
+        margin-bottom: 60px;
+        &:hover{
+                background-color:lighten(map-get($color,1er), $amount: 10);
+                box-shadow: lighten(map-get($color,2m), $amount: 10)30px 30px 50px inset,10px 10px 10px darken(map-get($color,bckgd), $amount: 30);
+                cursor: url(https://img.icons8.com/material-sharp/24/000000/search.png), pointer;
+        }
 }
+@mixin heart{
+        font-size: 40px;
+        .liked{
+                display:none;
+        }
+        .unliked:hover{
+            display:none;
+            +.liked{
+                background: linear-gradient(to top left,map-get($color,1er),map-get($color,2m));                 
+                display:block;
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+        }
+ }
+

@@ -1,38 +1,41 @@
 aside{
     display: flex;
     flex-direction: column;
+    h2{
+        padding:20px 30px 0px;
+        margin-bottom: 0;
+    }
     ul{
-        margin-bottom: 80px;
+        margin: 10px 0px 35px;
     }
     .li{
         background:map-get($color,bckgd);
-        height: 150px;
         margin:20px 15px;
         display: flex;
         align-items: center;
-        font-size: 40px;
-        box-shadow: 10px 10px 10px #e5e5e5;
         border-radius:$radius;
         width: 90%;
+        padding: 25px 0;
+        @include shadow;
         &__logo{
-            margin:0 30px;
-            width: 50px;
+            margin-right:25px;
+            width: 15px;
+            font-size: 20px;
             text-align: center;
             color:#7e7e7e;
         }
         &__number{
             background-color: map-get($color,1er);
             color:white;
-            width: 60px;
-            height: 55px;
             text-align: center;
-            border-radius: 30px;
-            padding-top: 5px;
-            position:relative;
-            left: -30px;
+            border-radius: 50%;
+            padding:2px 7px;
+            margin:0 25px 0 -10px;
         }
         &:hover{
-            background-color: #f5edff;
+            background-color:lighten(map-get($color,1er), $amount: 33);
+            @include shadow-hover;
+            cursor:pointer;
             .li__logo{
                 color:map-get($color,1er);
             }
