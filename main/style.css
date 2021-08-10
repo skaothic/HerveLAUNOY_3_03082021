@@ -34,6 +34,10 @@ h3 {
   padding-left: 15px;
 }
 
+span {
+  font-size: 20px;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -189,7 +193,7 @@ header {
   background-color: #f6f6f6;
 }
 
-header.palette, header.note, header.francaise, header.delice {
+header.restaurant {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -345,7 +349,7 @@ aside .li:hover .li__logo {
   padding: 45px 0 20px;
 }
 
-.main__resto {
+.main__h2 {
   padding-left: 30px;
 }
 
@@ -364,17 +368,22 @@ aside .li:hover .li__logo {
 }
 
 .carte .new {
-  color: white;
-  background-color: #99E2D0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #99E2D0;
   padding: 5px 15px;
   border-radius: 2px;
   color: #008766;
-  position: relative;
-  top: 9%;
-  left: 70%;
+  position: absolute;
+  right: 2%;
+  margin: 2% 30px;
 }
 
 .carte .desc {
@@ -420,20 +429,50 @@ aside .li:hover .li__logo {
   margin-bottom: 10px;
 }
 
-.menu {
+section {
   width: 100%;
-  border-radius: 50px;
-  background-color: #f6f6f6;
-  position: relative;
-  top: -40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.menu h1 {
+section .menu {
+  background-color: #f6f6f6;
+  border-radius: 40px;
+}
+
+section .menu button {
+  width: 60%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #9356DC;
+  -webkit-box-shadow: #FF79DA 30px 30px 50px inset, 10px 10px 10px #dddddd;
+          box-shadow: #FF79DA 30px 30px 50px inset, 10px 10px 10px #dddddd;
+  border-radius: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  width: 50%;
+  margin: 60px 25% 80px;
+}
+
+section .menu button:hover {
+  background-color: #ae80e5;
+  -webkit-box-shadow: #fface8 30px 30px 50px inset, 10px 10px 10px #aaaaaa;
+          box-shadow: #fface8 30px 30px 50px inset, 10px 10px 10px #aaaaaa;
+  cursor: url(https://img.icons8.com/material-sharp/24/000000/search.png), pointer;
+}
+
+section .menu h1 {
   padding: 35px 0;
   font-size: 35px;
 }
 
-.menu__title {
+section .menu__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -445,15 +484,15 @@ aside .li:hover .li__logo {
   font-size: 40px;
 }
 
-.menu__title .liked {
+section .menu__title .liked {
   display: none;
 }
 
-.menu__title .unliked:hover {
+section .menu__title .unliked:hover {
   display: none;
 }
 
-.menu__title .unliked:hover + .liked {
+section .menu__title .unliked:hover + .liked {
   background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   display: block;
@@ -462,20 +501,46 @@ aside .li:hover .li__logo {
   color: transparent;
 }
 
-.menu > span {
+section .menu > span {
   font-size: 20px;
   margin-left: 40px;
-  border-bottom: #008766 4px solid;
 }
 
-.menu > ul {
+section .menu > span .border {
+  background-color: #99E2D0;
+  height: 2px;
+  width: 10%;
+  position: relative;
+  left: 40px;
+}
+
+section .menu > ul {
   width: 90%;
 }
 
-.menu li {
+section .menu li {
   background-color: white;
-  margin: 10px 0;
+  margin: 10px 10px 15px 0;
+  padding: 15px 10px;
   border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section .menu li .prix {
+  font-weight: 600;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+section .menu li .plats {
+  font-weight: 500;
+  font-size: 21px;
+  margin-bottom: 8px;
 }
 
 footer {
