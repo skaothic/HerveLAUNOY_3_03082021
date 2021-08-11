@@ -48,6 +48,10 @@ section{
     background-color: map-get($color,bckgd);
     border-radius: 40px 40px 0 0 ;
     margin-top: -40px;
+        li:hover{
+
+
+        }
         button{
             @include button;
             width: 50%;
@@ -83,18 +87,40 @@ section{
     li{
         background-color: white;
         margin: 10px 10px 15px 0;
-        padding:15px 10px;
         border-radius: $radius;
+        p{
+            padding: 10px;
+        }
+        a{
         display: flex;
         justify-content: space-between;
+            &:hover{
+
+                & .fa-check-circle{
+                    display: flex;
+                    align-items: center;
+                    }
+        }
+        }
         .prix{
             font-weight: 600;
             align-self: flex-end;
+            padding-bottom: 10px;
         }
         .plats{
             font-weight: 500;
             font-size: 1.35em;
-            margin-bottom: 8px;
+            padding:15px 10px 8px;
+
+        }
+        .far{
+            display:none;
+            padding: 25px;
+            color:white;
+            width: 20%;
+            background-color:map-get($color,3m);
+            font-size:2em;
+            border-radius: 0 $radius $radius 0;
         }
     }
 }
