@@ -38,6 +38,8 @@ aside{
             cursor:pointer;
             .li__logo{
                 color:map-get($color,1er);
+                transform: rotate(360deg);
+                transition: transform 1s,color 2s;
             }
         }
     }

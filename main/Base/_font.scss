@@ -6,13 +6,13 @@ h1{
     margin-block-start: 0;
     margin-block-end: 0;
     font-weight: 100;
-    font-size: 35px;
+    font-size: 2.2em;
 }
 h2{
-    font-size: 25px;
+    font-size: 1.6em;
     font-weight: 600;
     &.header__titre{
-        font-size:27px;
+        font-size:1.7em;
     }
 }
 h3{
@@ -24,7 +24,7 @@ h3{
     padding-left: 15px;
 }
 span{
-    font-size: 20px;
+    font-size: 1.25em;
 }
 a{
     text-decoration: none;
@@ -34,37 +34,38 @@ a{
     color:white;
 }
 button{
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 600;
 }
 li{
     list-style: none;
-    font-size:16px;
     &.li{
     font-weight: 500;
     }
 }
 p{
-        font-size:18px;
+        font-size:1.15em;
         font-weight: 300;
         margin-block-start:0;
         margin-block-end:0;
+        &.quartier{
+            font-size:0.5em;
+        }
 }
 form{
     >input, >.marker{
-    font-size: 18px;
+    font-size: 1.4em;
     font-weight: 600;
     }
 }
 .carte{
     .new{
-        font-size: 16px;
+        font-size: 1em;
         font-weight: 500;
     }
     .desc{
-        font-size: 40px;
         .name{
-            font-size: 20px;
+            font-size: 0.65em;
             font-weight:600 ;
         }
         .quartier{
