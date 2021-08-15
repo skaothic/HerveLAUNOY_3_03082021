@@ -7,6 +7,10 @@ aside{
     }
     ul{
         margin: 10px 0px 35px;
+        @include tablette{
+            display: flex;
+            }
+        
     }
     .li{
         background:map-get($color,bckgd);

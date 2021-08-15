@@ -22,6 +22,15 @@ h2.header__titre {
   font-size: 1.7em;
 }
 
+.unliked {
+  font-weight: 100;
+}
+
+.plats {
+  font-size: 1.20em;
+  font-weight: 500;
+}
+
 h3 {
   -webkit-margin-before: 0;
           margin-block-start: 0;
@@ -58,10 +67,11 @@ li {
 
 li.li {
   font-weight: 500;
+  font-size: .8em;
 }
 
 p {
-  font-size: 1.15em;
+  font-size: 1em;
   font-weight: 300;
   -webkit-margin-before: 0;
           margin-block-start: 0;
@@ -70,12 +80,14 @@ p {
 }
 
 p.quartier {
-  font-size: 0.5em;
+  font-size: 0.45em;
+  font-weight: 300;
 }
 
 form > input, form > .marker {
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: 600;
+  color: #353535;
 }
 
 .carte .new {
@@ -84,12 +96,8 @@ form > input, form > .marker {
 }
 
 .carte .desc .name {
-  font-size: 0.65em;
+  font-size: 0.5em;
   font-weight: 600;
-}
-
-.carte .desc .quartier {
-  font-weight: 300;
 }
 
 button {
@@ -217,11 +225,11 @@ header.restaurant {
 
 header > p {
   text-align: center;
-  margin: 20px 5% 45px;
+  margin: 20px 5% 30px;
 }
 
 header > h2 {
-  margin: 35px 11% 5px;
+  margin: 35px 12% 3px;
   text-align: center;
   padding-left: 0;
 }
@@ -253,6 +261,12 @@ form {
           box-shadow: 0px 5px 10px #cecece inset;
 }
 
+@media screen and (min-width: 800px) {
+  form {
+    padding: 0 35% 0 60%;
+  }
+}
+
 form > input {
   width: 40%;
   height: 50%;
@@ -268,7 +282,6 @@ form > .marker {
 }
 
 .a__button {
-  margin: 0 10%;
   width: 60%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -279,6 +292,7 @@ form > .marker {
   border-radius: 40px;
   text-align: center;
   margin-bottom: 60px;
+  margin: 0 15% 50px;
 }
 
 .a__button:hover {
@@ -309,6 +323,14 @@ aside h2 {
 
 aside ul {
   margin: 10px 0px 35px;
+}
+
+@media screen and (min-width: 800px) {
+  aside ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 aside .li {
@@ -374,10 +396,38 @@ aside .li:hover .li__logo {
   padding: 0 30px;
 }
 
+@media screen and (min-width: 800px) {
+  .main__cartes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .main {
+    background-color: white;
+    padding-top: 10px;
+  }
+}
+
 .carte {
   border-radius: 20px;
   background-color: white;
   margin-bottom: 30px;
+  -webkit-box-shadow: 10px 10px 10px #dddddd;
+          box-shadow: 10px 10px 10px #dddddd;
+}
+
+@media screen and (min-width: 800px) {
+  .carte {
+    width: 45%;
+  }
 }
 
 .carte a:hover {
@@ -401,6 +451,14 @@ aside .li:hover .li__logo {
   position: absolute;
   right: 2%;
   margin: 2% 30px;
+}
+
+@media screen and (min-width: 800px) {
+  .carte .new {
+    position: relative;
+    right: -60%;
+    top: 10%;
+  }
 }
 
 .carte .desc {
@@ -516,7 +574,6 @@ section .menu__title .unliked:hover + .liked {
 }
 
 section .menu > span {
-  font-size: 1.25em;
   margin-left: 40px;
 }
 
@@ -539,7 +596,7 @@ section .menu li {
 }
 
 section .menu li p {
-  padding: 10px;
+  padding: 0 10px 10px;
 }
 
 section .menu li a {
@@ -549,6 +606,14 @@ section .menu li a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 75px;
+}
+
+section .menu li a > div {
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 section .menu li a:hover .fa-check-circle {
@@ -558,26 +623,30 @@ section .menu li a:hover .fa-check-circle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 section .menu li .prix {
   font-weight: 600;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  padding-bottom: 10px;
+  padding: 0 30px 10px;
 }
 
 section .menu li .plats {
-  font-weight: 500;
-  font-size: 1.35em;
-  padding: 15px 10px 8px;
+  padding: 15px 10px 6px;
+  height: 23px;
+  text-overflow: ellipsis;
 }
 
 section .menu li .far {
   display: none;
-  padding: 25px;
+  height: 75px;
   color: white;
   width: 20%;
+  font-weight: 600;
   background-color: #99E2D0;
   font-size: 2em;
   border-radius: 0 20px 20px 0;
@@ -587,13 +656,36 @@ footer {
   background-color: #353535;
   color: white;
   padding: 6%;
-  height: 20%;
+  height: 300px;
+}
+
+@media screen and (min-width: 800px) {
+  footer {
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  footer h1 {
+    text-align: center;
+  }
 }
 
 footer ul {
   width: 85%;
   margin-left: 0;
   padding-left: 0;
+}
+
+@media screen and (min-width: 800px) {
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
 footer ul li {

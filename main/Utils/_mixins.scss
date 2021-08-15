@@ -48,8 +48,16 @@
             }
         }
  }
+@mixin tablette{
+        @media screen and (min-width:map-get($breaks,tablette))
+        {@content;}
+}
 @mixin carte{
         border-radius:$radius;
         background-color:white;
         margin-bottom: 30px;
+        @include shadow;
+        @include tablette{
+                width:45%;
+            }
 }

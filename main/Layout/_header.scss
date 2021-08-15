@@ -10,10 +10,10 @@ header{
     }
     >p{
         text-align: center;
-        margin: 20px 5% 45px;
+        margin: 20px 5% 30px;
     }
     >h2{
-        margin:35px 11% 5px;
+        margin:35px 12% 3px;
         text-align: center;
         padding-left: 0;
         }
@@ -35,6 +35,9 @@ form{
     height: 55px;
     background-color: #EAEAEA;
     box-shadow: 0px 5px 10px #cecece inset;
+    @include tablette{
+        padding:0 35% 0 60%;
+    }
     >input{
         width: 40%;
         height: 50%;
@@ -43,14 +46,15 @@ form{
         margin-left: 10px;
         position:relative;
         top:25%;
+        
     }
     >.marker{
         margin: 0 10px;
     }
 }
 .a__button{
-    margin:0 10%;
     @include button;
+    margin:0 15% 50px;
 }
 button:hover{
     cursor: url(https://img.icons8.com/material-sharp/24/000000/search.png), pointer;
