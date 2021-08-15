@@ -48,7 +48,14 @@
             }
         }
  }
+<<<<<<< Updated upstream
 
+=======
+@mixin tablette{
+        @media screen and (min-width:map-get($breaks,tablette))
+        {@content;}
+}
+>>>>>>> Stashed changes
 @mixin carte{
         border-radius:$radius;
         background-color:white;
