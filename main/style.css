@@ -13,6 +13,12 @@ h1 {
   font-size: 2.2em;
 }
 
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 3.5em;
+  }
+}
+
 h2 {
   font-size: 1.6em;
   font-weight: 600;
@@ -54,6 +60,12 @@ a {
 
 .a__foot {
   color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  .a__foot {
+    font-size: 1.2em;
+  }
 }
 
 button {
@@ -251,24 +263,17 @@ form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
   height: 55px;
   background-color: #EAEAEA;
   -webkit-box-shadow: 0px 5px 10px #cecece inset;
           box-shadow: 0px 5px 10px #cecece inset;
-}
-
-@media screen and (min-width: 800px) {
-  form {
-    padding: 0 35% 0 60%;
-  }
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 form > input {
-  width: 40%;
   height: 50%;
   background-color: #EAEAEA;
   border: none;
@@ -325,7 +330,7 @@ aside ul {
   margin: 10px 0px 35px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
   aside ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -396,7 +401,7 @@ aside .li:hover .li__logo {
   padding: 0 30px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
   .main__cartes {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -409,7 +414,7 @@ aside .li:hover .li__logo {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
   .main {
     background-color: white;
     padding-top: 10px;
@@ -424,7 +429,7 @@ aside .li:hover .li__logo {
           box-shadow: 10px 10px 10px #dddddd;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
   .carte {
     width: 45%;
   }
@@ -453,7 +458,7 @@ aside .li:hover .li__logo {
   margin: 2% 30px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
   .carte .new {
     position: relative;
     right: -60%;
@@ -656,16 +661,16 @@ footer {
   background-color: #353535;
   color: white;
   padding: 6%;
-  height: 300px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
   footer {
-    height: 100px;
+    padding-top: 0;
+    padding-bottom: 2%;
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
   footer h1 {
     text-align: center;
   }
@@ -677,19 +682,18 @@ footer ul {
   padding-left: 0;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
   footer ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
 footer ul li {
-  height: 10px;
   padding: 10px 0;
 }
 
@@ -697,7 +701,19 @@ footer ul .fas {
   width: 20px;
 }
 
+@media screen and (min-width: 1024px) {
+  footer ul .fas {
+    width: 30px;
+  }
+}
+
 body {
   margin: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -6,13 +6,13 @@
     }
     &__cartes{
         padding:0 30px;
-        @include tablette{
+        @include desktop{
             display:flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
         }
     }
-    @include tablette{
+    @include desktop{
         background-color: white;
         padding-top: 10px;
     }
@@ -33,7 +33,7 @@
         position: absolute;
         right:2%;
         margin:2% 30px;
-        @include tablette{
+        @include desktop{
             position: relative;
             right: -60%;
             top: 10%;

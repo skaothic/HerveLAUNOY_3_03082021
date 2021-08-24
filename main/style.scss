@@ -15,4 +15,7 @@
 
 body{
     margin:0;
+    @include desktop{
+        font-size: 18px;
+    }
 }

@@ -48,8 +48,8 @@
             }
         }
  }
-@mixin tablette{
-        @media screen and (min-width:map-get($breaks,tablette))
+@mixin desktop{
+        @media screen and (min-width:map-get($breaks,desktop))
         {@content;}
 }
 @mixin carte{
@@ -57,7 +57,7 @@
         background-color:white;
         margin-bottom: 30px;
         @include shadow;
-        @include tablette{
+        @include desktop{
                 width:45%;
             }
 }
