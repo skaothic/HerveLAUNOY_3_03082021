@@ -33,9 +33,9 @@
         }
 }
 @mixin heart{
-        font-size: 40px;
         .liked{
                 display:none;
+                transition-property:display;
         }
         .unliked:hover{
                 display:none;
@@ -45,6 +45,7 @@
                 background-clip: text;
                 -webkit-background-clip: text;
                 color: transparent;
+                font-size: 40px;
             }
         }
  }

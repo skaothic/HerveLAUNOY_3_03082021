@@ -16,46 +16,45 @@
         background-color: white;
         padding-top: 10px;
     }
-}
-.carte{
-    @include carte;
-    & a:hover{
-        cursor:url(https://img.icons8.com/fluency/32/000000/restaurant.png),pointer;
-    }
-     .new{
-        display: flex;
-        width: fit-content;
-        height: fit-content;
-        background-color:map-get($color,3m);
-        padding:5px 15px;
-        border-radius: 2px;
-        color:#008766;
-        position: absolute;
-        right:2%;
-        margin:2% 30px;
-        @include desktop{
-            position: relative;
-            right: -60%;
-            top: 10%;
+    .carte{
+        @include carte;
+        & a:hover{
+            cursor:url(https://img.icons8.com/fluency/32/000000/restaurant.png),pointer;
+        }
+        .new{
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+            background-color:map-get($color,3m);
+            padding:5px 15px;
+            border-radius: 2px;
+            color:#008766;
+            position: absolute;
+            right:2%;
+            margin:2% 30px;
+            @include desktop{
+                position: relative;
+                right: -77%;
+                top: 10%;
+            }
+        }
+        .desc{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            @include heart;
+                &:hover{
+                cursor: pointer;
+            }
+            .name{
+                margin: 10px 0 5px;
+            }
+            .quartier{
+                margin-bottom: 10px;
+            }
         }
     }
-    .desc{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 5%;
-        @include heart;
-        &:hover{
-            cursor: pointer;
-        }
-        .name{
-            margin: 10px 0 5px;
-        }
-        .quartier{
-            margin-bottom: 10px;
-        }
-    }
-   
 }
 section{
     width: 100%;
@@ -70,7 +69,6 @@ section{
         }
         h1{
         padding:35px 0;
-        font-size: 0.875em;
         margin-left: 40px;
         }
         &__title{
@@ -107,16 +105,43 @@ section{
         height: 75px;
         >div{
         width: 80%;
-        overflow: hidden;
+        flex: 1;
         text-overflow: ellipsis;
+        overflow: clip;
         white-space: nowrap;
         }
+        .far{
+            position: absolute;
+            left: 76%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: scalex(0);
+            transform-origin: right;            
+            height: 75px;            
+            color:white;
+            width: 20%;
+            font-weight: 600;
+            background-color:map-get($color,3m);
+            font-size:1.5em;
+            border-radius: 0 $radius $radius 0;
+            transition: transform .8s;
+            >.fa-check-circle{
+                visibility: hidden;
+                transform: rotate(0) scale(0);
+                transition: transform .8s,visibility;
+            } 
+        }
             &:hover{
-
-                & .fa-check-circle{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                & .far{
+                    position: inherit;
+                    transform: scalex(1);
+                    transform-origin: right;
+                    .fa-check-circle{
+                        visibility: visible;
+                        transform: rotate(360deg) scale(1);
+                        transform-origin: center;
+                    }                    
                     }
         }
         }
@@ -129,16 +154,13 @@ section{
             padding:15px 10px 6px;
             height: 23px;
             text-overflow: ellipsis;
-        }
-        .far{
-            display:none;
-            height: 75px;            
-            color:white;
-            width: 20%;
-            font-weight: 600;
-            background-color:map-get($color,3m);
-            font-size:2em;
-            border-radius: 0 $radius $radius 0;
+            overflow: clip;
+            white-space: nowrap;
+                +p{
+                    text-overflow: ellipsis;
+                    overflow: clip;
+                    white-space: nowrap;
+                        }
         }
     }
 }
