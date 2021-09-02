@@ -5,78 +5,15 @@
 @import "./Base/font";
 @import "./Base/background";
 @import "./Composants/bouton";
-@import "./Composants/foodBox";
 @import "./Composants/logo";
+@import "./Composants/loader";
 @import "./Layout/images";
 @import "./Layout/header";
 @import "./Layout/aside";
 @import "./Layout/main";
 @import "./Layout/footer";
 
+
 body{
     margin:0;
-}
-header ,section ,footer{
-    @include desktop{
-    animation: fadein 15s;
-    -moz-animation: fadein 15s;
-    -webkit-animation: fadein 15s; 
-    -o-animation: fadein 15s;
-}
-}
-.table{
-    display: none;
-    @include desktop{
-    display: block;
-    z-index: 1;
-    -webkit-animation: fadeout 10s ease-in-out both;
-    animation: fadeout 10s ease-in-out both;
-    width:500px;
-    height: 500px;
-    background: linear-gradient(to top left,map-get($color,1er),map-get($color,2m));   
-    position: absolute;
-    left: 35%;
-    top: 15%;
-    border-radius: 50%;
-    & div{
-        font-family:Shrikhand;
-        position:absolute;
-        font-size: 150px;
-        font-weight: bold;
-        color:map-get($color,3m);
-        animation: pop 1s linear;
-    }
-    & .O1{
-            top: 10px;
-            left: 155px;
-        }
-    & .H{
-        top: 10px;
-        left: 250px;
-    }
-    & .M{
-        top: 130px;
-        left: 115px;
-    }
-    & .Y{
-        top: 130px;
-        left: 270px;
-    }
-    & .F{
-        top: 280px;
-        left: 90px;
-    }
-    & .O2{
-        top: 280px;
-        left: 145px;
-        }
-    & .O3{
-        top: 280px;
-        left: 230px;
-    }
-    & .D{
-        top: 280px;
-        left: 330px;
-    }
-    }
 }

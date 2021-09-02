@@ -7,12 +7,13 @@
       opacity: 1;
     }
   }
-@keyframes fadeout{
+@keyframes out{
     0% {
-        opacity: 1;
+        transform: scale(1) translateX(-50%);
     }
     100%{
-        opacity: 0;
+        transform: scale(0) translateX(-50%);
+        transform-origin: left;
         display:none;
     }
 }
@@ -21,7 +22,27 @@
     transform: scale(0) rotate(0deg);
   }
   100%{
-    transform: scale(1) rotate(360deg);
+    transform: scale(1) rotate(720deg);
+  }
+}
+@keyframes category{
+  0%{
+    transform:translateX(2000px);
+  }
+  100%{
+    transform:translateX(0px);
+  }
+}
+@keyframes food {
+  0%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  95%{
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(0px);
   }
   
 }

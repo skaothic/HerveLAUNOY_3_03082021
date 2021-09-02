@@ -26,6 +26,9 @@
         border-radius: 40px;
         text-align: center;
         margin-bottom: 60px;
+        @include desktop{
+                width: 30%;
+        }
         &:hover{
                 background-color:lighten(map-get($color,1er), $amount: 10);
                 box-shadow: lighten(map-get($color,2m), $amount: 10)30px 30px 50px inset,10px 10px 10px darken(map-get($color,bckgd), $amount: 30);
@@ -33,19 +36,26 @@
         }
 }
 @mixin heart{
-        .liked{
-                display:none;
-                transition-property:display;
+        .unliked{
+                opacity: 1;
+                transition: opacity 1s;
+                position: relative;
+                left: 335px;
         }
-        .unliked:hover{
-                display:none;
-                +.liked{
+        .liked{
+                display: block;
+                height: 0;                
+                transition: height 2s;
                 background: linear-gradient(to top left,map-get($color,1er),map-get($color,2m));                 
-                display:block;
                 background-clip: text;
                 -webkit-background-clip: text;
                 color: transparent;
                 font-size: 40px;
+        }
+        .unliked:hover{
+                opacity:0;
+                +.liked{
+                height: 40px;
             }
         }
  }

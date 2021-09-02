@@ -1,3 +1,4 @@
+/*page d'accueil*/
 .main{
     background-color: map-get($color,bckgd);
     padding: 45px 0 20px;
@@ -22,21 +23,12 @@
             cursor:url(https://img.icons8.com/fluency/32/000000/restaurant.png),pointer;
         }
         .new{
-            display: flex;
-            width: fit-content;
             height: fit-content;
             background-color:map-get($color,3m);
             padding:5px 15px;
             border-radius: 2px;
             color:#008766;
-            position: absolute;
-            right:2%;
-            margin:2% 30px;
-            @include desktop{
-                position: relative;
-                right: -77%;
-                top: 10%;
-            }
+            margin: 3% 4%;
         }
         .desc{
             display: flex;
@@ -53,9 +45,13 @@
             .quartier{
                 margin-bottom: 10px;
             }
+            .fa-heart{
+                justify-items: flex-end;
+            }
         }
     }
 }
+/*pages resto*/
 section{
     width: 100%;
     .menu{
@@ -79,13 +75,26 @@ section{
         margin-right: 30px;
     }
     >span{
+        display: inline-block;
         margin-left:40px;
+        animation: category 1s ease-in-out both;
+        &.plat{
+            animation-delay: 2s;
+            >.border{
+               animation-delay: 2s; 
+            }
+        }
+        &.desserts{
+            animation-delay: 4s;
+            >.border{
+                animation-delay: 4s;
+            }
+        }
         .border{
             background-color: map-get($color,3m);
             height: 3px;
             width: 2.5em;
-            position: relative;
-            left: 40px;
+            animation: category 1s cubic-bezier(0.9,-0.37, 0.11,-1.04) ;
         }
 
     }
@@ -96,54 +105,53 @@ section{
         background-color: white;
         margin: 10px 10px 15px 0;
         border-radius: $radius;
+        @include shadow;
+        animation: food 3s ease 1s both;
+        &.plat{
+            animation-delay: 3s;
+        }
+        &.dessert{
+            animation-delay: 5s;
+        }
         p{
             padding: 0 10px 10px;
         }
         a{
-        display: flex;
-        justify-content: space-between;
-        height: 75px;
-        >div{
-        width: 80%;
-        flex: 1;
-        text-overflow: ellipsis;
-        overflow: clip;
-        white-space: nowrap;
-        }
-        .far{
-            position: absolute;
-            left: 76%;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            transform: scalex(0);
-            transform-origin: right;            
-            height: 75px;            
-            color:white;
-            width: 20%;
-            font-weight: 600;
-            background-color:map-get($color,3m);
-            font-size:1.5em;
-            border-radius: 0 $radius $radius 0;
-            transition: transform .8s;
-            >.fa-check-circle{
-                visibility: hidden;
-                transform: rotate(0) scale(0);
-                transition: transform .8s,visibility;
-            } 
-        }
+            justify-content: space-between;
+            height: 75px;
+            >div{
+                width: 80%;
+                text-overflow: ellipsis;
+                overflow: clip;
+                white-space: nowrap;
+            }
+            .far{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 75px;
+                width: 0%;            
+                color:white;
+                font-weight: 600;
+                background-color:map-get($color,3m);
+                font-size:1.5em;
+                border-radius: 0 $radius $radius 0;
+                transition:width .8s;
+                >.fa-check-circle{
+                    height: fit-content;
+                    transform: rotate(0) scale(0);
+                    transition: transform .8s;
+                    } 
+            }
             &:hover{
                 & .far{
-                    position: inherit;
-                    transform: scalex(1);
-                    transform-origin: right;
+                    width: 20%;
                     .fa-check-circle{
-                        visibility: visible;
                         transform: rotate(360deg) scale(1);
-                        transform-origin: center;
                     }                    
-                    }
-        }
+                }
+            }
         }
         .prix{
             font-weight: 600;
@@ -160,7 +168,7 @@ section{
                     text-overflow: ellipsis;
                     overflow: clip;
                     white-space: nowrap;
-                        }
+                    }
         }
     }
 }

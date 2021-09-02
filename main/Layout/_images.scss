@@ -2,11 +2,15 @@
     &--palette{
     @include bckgd;
     background-image:url(Palette.jpg);
+    display: flex;
+    justify-content: flex-end
     }
     &--note{
     @include bckgd;
     background-image: url(Note.jpg);
     background-position:center;
+    display: flex;
+    justify-content: flex-end
     }
     &--française{
     @include bckgd;
