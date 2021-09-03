@@ -24,21 +24,17 @@
 }
 .bckgdresto{
     &__palette{
-        @include bckgdresto;
-        background-position: center;
         background-image: url(palette.jpg);
+        @include bckgdresto;
     }&__note{
         background-image: url(note.jpg);
         @include bckgdresto;
-        background-position: center;
     }&__délice{
-        background-position: center;
-        @include bckgdresto;
         background-image: url(délice.jpg);
-    }&__française{
-        background-position: center;
         @include bckgdresto;
+    }&__française{
         background-image: url(française.jpg);
+        @include bckgdresto;
     }
 }
 img{
