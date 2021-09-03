@@ -10,7 +10,7 @@ header{
     }
     >p{
         text-align: center;
-        margin: 20px 5% 30px;
+        margin: 20px 10% 30px;
     }
     >h2{
         margin:35px 12% 3px;
@@ -19,7 +19,7 @@ header{
         }
 }
 .logoBox{
-    height:70px;
+    height:90px;
     width:100%;
     &.Titre{
     background-color: white;
@@ -42,15 +42,24 @@ form{
         margin-left: 10px;
         position:relative;
         top:25%;
-        
+        width: 30%;
+        @include desktop{
+            width: unset;
+        }
+        &:focus-visible{
+            outline: none;
+        }
     }
-    >.marker{
+    >a{
+        width: fit-content;
+        height: fit-content;
+        align-self: center;
         margin: 0 10px;
-    }
+}
 }
 .a__button{
     @include button;
-    margin:0 15% 50px;
+    margin:0 20% 50px;
 }
 button:hover{
     cursor: url(https://img.icons8.com/material-sharp/24/000000/search.png), pointer;

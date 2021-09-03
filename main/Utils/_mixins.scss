@@ -2,15 +2,13 @@
         background-size: cover;
         background-position: bottom;
         width: 100%;
-        height: 180px;
+        height: 250px;
         border-radius: $radius $radius 0 0;  
 }
 @mixin bckgdresto{
         background-size: cover;
         width:100%;
-        height: 345px;
-        z-index: -1;
-        flex-shrink: 2;
+        height: 400px;
 }
 @mixin shadow {
         box-shadow: 10px 10px 10px darken(map-get($color,bckgd), $amount: 10);
@@ -25,7 +23,6 @@
         box-shadow:map-get($color,2m) 30px 30px 50px inset,10px 10px 10px darken(map-get($color,bckgd), $amount: 10);
         border-radius: 40px;
         text-align: center;
-        margin-bottom: 60px;
         @include desktop{
                 width: 30%;
         }
@@ -33,29 +30,32 @@
                 background-color:lighten(map-get($color,1er), $amount: 10);
                 box-shadow: lighten(map-get($color,2m), $amount: 10)30px 30px 50px inset,10px 10px 10px darken(map-get($color,bckgd), $amount: 30);
                 cursor: url(https://img.icons8.com/material-sharp/24/000000/search.png), pointer;
+                transform: scale(1);
         }
 }
 @mixin heart{
         .unliked{
                 opacity: 1;
-                transition: opacity 1s;
-                position: relative;
-                left: 335px;
+                transition: opacity .5s;
+                display: inline-block;
+                position: absolute;
         }
         .liked{
-                display: block;
-                height: 0;                
-                transition: height 2s;
-                background: linear-gradient(to top left,map-get($color,1er),map-get($color,2m));                 
-                background-clip: text;
-                -webkit-background-clip: text;
+                background:transparent;
                 color: transparent;
                 font-size: 40px;
         }
         .unliked:hover{
                 opacity:0;
+                color: map-get($color,1er);
                 +.liked{
-                height: 40px;
+                        background: linear-gradient(to top left,map-get($color,1er),map-get($color,2m));                 
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        background-position: bottom;
+                        background-repeat: no-repeat;
+                        animation: heartfilling .5s linear;
+
             }
         }
  }

@@ -118,6 +118,24 @@
   }
 }
 
+@-webkit-keyframes heartfilling {
+  0% {
+    background-size: 100% 0%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes heartfilling {
+  0% {
+    background-size: 100% 0%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
 * {
   font-family: roboto;
 }
@@ -152,8 +170,13 @@ h2.header__titre {
 }
 
 .plats {
-  font-size: 1.20em;
+  font-size: 1.3em;
   font-weight: 500;
+}
+
+.prix {
+  font-size: 1.20em;
+  font-weight: 600;
 }
 
 h3 {
@@ -169,12 +192,7 @@ h3 {
 }
 
 span {
-  font-size: 1.25em;
-}
-
-a {
-  text-decoration: none;
-  color: black;
+  font-size: 1.5em;
 }
 
 .a__foot {
@@ -185,6 +203,22 @@ a {
   .a__foot {
     font-size: 1.1em;
   }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+a:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 button {
@@ -199,6 +233,10 @@ li {
 li.li {
   font-weight: 500;
   font-size: .8em;
+}
+
+li.li > span {
+  font-size: 1.25em;
 }
 
 p {
@@ -321,7 +359,7 @@ button {
   background-size: cover;
   background-position: bottom;
   width: 100%;
-  height: 180px;
+  height: 250px;
   border-radius: 20px 20px 0 0;
   background-image: url(Palette.jpg);
   display: -webkit-box;
@@ -330,16 +368,17 @@ button {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  background-position: 10%;
 }
 
 .carte__bckgd--note {
   background-size: cover;
   background-position: bottom;
   width: 100%;
-  height: 180px;
+  height: 250px;
   border-radius: 20px 20px 0 0;
   background-image: url(Note.jpg);
-  background-position: center;
+  background-position: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -352,7 +391,7 @@ button {
   background-size: cover;
   background-position: bottom;
   width: 100%;
-  height: 180px;
+  height: 250px;
   border-radius: 20px 20px 0 0;
   background-image: url(Française.jpg);
 }
@@ -361,7 +400,7 @@ button {
   background-size: cover;
   background-position: bottom;
   width: 100%;
-  height: 180px;
+  height: 250px;
   border-radius: 20px 20px 0 0;
   background-image: url(délice.jpg);
 }
@@ -369,45 +408,37 @@ button {
 .bckgdresto__palette {
   background-size: cover;
   width: 100%;
-  height: 345px;
-  z-index: -1;
-  -ms-flex-negative: 2;
-      flex-shrink: 2;
+  height: 400px;
+  background-position: center;
   background-image: url(palette.jpg);
 }
 
 .bckgdresto__note {
+  background-image: url(note.jpg);
   background-size: cover;
   width: 100%;
-  height: 345px;
-  z-index: -1;
-  -ms-flex-negative: 2;
-      flex-shrink: 2;
-  background-image: url(note.jpg);
+  height: 400px;
+  background-position: center;
 }
 
 .bckgdresto__délice {
+  background-position: center;
   background-size: cover;
   width: 100%;
-  height: 345px;
-  z-index: -1;
-  -ms-flex-negative: 2;
-      flex-shrink: 2;
+  height: 400px;
   background-image: url(délice.jpg);
 }
 
 .bckgdresto__française {
+  background-position: center;
   background-size: cover;
   width: 100%;
-  height: 345px;
-  z-index: -1;
-  -ms-flex-negative: 2;
-      flex-shrink: 2;
+  height: 400px;
   background-image: url(française.jpg);
 }
 
 img {
-  width: 45%;
+  width: 60%;
   display: block;
   margin: auto;
   height: 100%;
@@ -440,7 +471,7 @@ header.restaurant {
 
 header > p {
   text-align: center;
-  margin: 20px 5% 30px;
+  margin: 20px 10% 30px;
 }
 
 header > h2 {
@@ -450,7 +481,7 @@ header > h2 {
 }
 
 .logoBox {
-  height: 70px;
+  height: 90px;
   width: 100%;
 }
 
@@ -483,9 +514,29 @@ form > input {
   margin-left: 10px;
   position: relative;
   top: 25%;
+  width: 30%;
 }
 
-form > .marker {
+@media screen and (min-width: 1024px) {
+  form > input {
+    width: unset;
+  }
+}
+
+form > input:focus-visible {
+  outline: none;
+}
+
+form > a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   margin: 0 10px;
 }
 
@@ -499,8 +550,7 @@ form > .marker {
           box-shadow: #FF79DA 30px 30px 50px inset, 10px 10px 10px #dddddd;
   border-radius: 40px;
   text-align: center;
-  margin-bottom: 60px;
-  margin: 0 15% 50px;
+  margin: 0 20% 50px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -514,6 +564,8 @@ form > .marker {
   -webkit-box-shadow: #fface8 30px 30px 50px inset, 10px 10px 10px #aaaaaa;
           box-shadow: #fface8 30px 30px 50px inset, 10px 10px 10px #aaaaaa;
   cursor: url(https://img.icons8.com/material-sharp/24/000000/search.png), pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 button:hover {
@@ -675,35 +727,40 @@ aside .li:hover .li__logo {
 
 .main .carte .desc .unliked {
   opacity: 1;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
-  position: relative;
-  left: 335px;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+  display: inline-block;
+  position: absolute;
 }
 
 .main .carte .desc .liked {
-  display: block;
-  height: 0;
-  -webkit-transition: height 2s;
-  transition: height 2s;
-  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
+  background: transparent;
   color: transparent;
   font-size: 40px;
 }
 
 .main .carte .desc .unliked:hover {
   opacity: 0;
+  color: #9356DC;
 }
 
 .main .carte .desc .unliked:hover + .liked {
-  height: 40px;
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  -webkit-animation: heartfilling .5s linear;
+          animation: heartfilling .5s linear;
 }
 
 .main .carte .desc:hover {
   cursor: pointer;
+}
+
+.main .carte .desc .favorite {
+  display: inline-block;
 }
 
 .main .carte .desc .name {
@@ -725,8 +782,23 @@ section {
 
 section .menu {
   background-color: #f6f6f6;
-  border-radius: 40px 40px 0 0;
-  margin-top: -40px;
+  border-radius: 60px 60px 0 0;
+  margin-top: -60px;
+}
+
+@media screen and (min-width: 1024px) {
+  section .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 section .menu button {
@@ -739,9 +811,7 @@ section .menu button {
           box-shadow: #FF79DA 30px 30px 50px inset, 10px 10px 10px #dddddd;
   border-radius: 40px;
   text-align: center;
-  margin-bottom: 60px;
-  width: 50%;
-  margin: 60px 25% 80px;
+  margin: 60px 20% 80px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -755,6 +825,8 @@ section .menu button:hover {
   -webkit-box-shadow: #fface8 30px 30px 50px inset, 10px 10px 10px #aaaaaa;
           box-shadow: #fface8 30px 30px 50px inset, 10px 10px 10px #aaaaaa;
   cursor: url(https://img.icons8.com/material-sharp/24/000000/search.png), pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 section .menu h1 {
@@ -777,31 +849,38 @@ section .menu__title {
 
 section .menu__title .unliked {
   opacity: 1;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
-  position: relative;
-  left: 335px;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+  display: inline-block;
+  position: absolute;
 }
 
 section .menu__title .liked {
-  display: block;
-  height: 0;
-  -webkit-transition: height 2s;
-  transition: height 2s;
-  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
+  background: transparent;
   color: transparent;
   font-size: 40px;
 }
 
 section .menu__title .unliked:hover {
   opacity: 0;
+  color: #9356DC;
 }
 
 section .menu__title .unliked:hover + .liked {
-  height: 40px;
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  -webkit-animation: heartfilling .5s linear;
+          animation: heartfilling .5s linear;
+}
+
+@media screen and (min-width: 1024px) {
+  section .menu__title {
+    width: 60%;
+  }
 }
 
 section .menu > span {
@@ -809,6 +888,14 @@ section .menu > span {
   margin-left: 40px;
   -webkit-animation: category 1s ease-in-out both;
           animation: category 1s ease-in-out both;
+}
+
+@media screen and (min-width: 1024px) {
+  section .menu > span {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-left: 30%;
+  }
 }
 
 section .menu > span.plat {
@@ -841,6 +928,12 @@ section .menu > span .border {
 
 section .menu > ul {
   width: 90%;
+}
+
+@media screen and (min-width: 1024px) {
+  section .menu > ul {
+    width: 40%;
+  }
 }
 
 section .menu li {
@@ -917,6 +1010,11 @@ section .menu li a .far > .fa-check-circle {
   transition: transform .8s, -webkit-transform .8s;
 }
 
+section .menu li a:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 section .menu li a:hover .far {
   width: 20%;
 }
@@ -927,7 +1025,6 @@ section .menu li a:hover .far .fa-check-circle {
 }
 
 section .menu li .prix {
-  font-weight: 600;
   -ms-flex-item-align: end;
       align-self: flex-end;
   padding: 0 30px 10px;
