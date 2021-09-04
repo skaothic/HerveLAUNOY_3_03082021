@@ -105,9 +105,10 @@ section{
             }
         }
         .border{
+            display: block;
             background-color: map-get($color,3m);
             height: 3px;
-            width: 2.5em;
+            width: 1.5em;
             animation: category 1s cubic-bezier(0.9,-0.37, 0.11,-1.04) ;
         }
 
@@ -140,7 +141,7 @@ section{
             >div{
                 width: 80%;
                 text-overflow: ellipsis;
-                overflow: clip;
+                overflow: hidden;
                 white-space: nowrap;
             }
             .far{
@@ -179,11 +180,11 @@ section{
             padding:15px 10px 6px;
             height: 23px;
             text-overflow: ellipsis;
-            overflow: clip;
+            overflow: hidden;
             white-space: nowrap;
                 +p{
                     text-overflow: ellipsis;
-                    overflow: clip;
+                    overflow: hidden;
                     white-space: nowrap;
                     }
         }

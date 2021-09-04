@@ -300,8 +300,8 @@ button {
   .tableload {
     display: block;
     z-index: 1;
-    -webkit-animation: out 1s ease-in-out 10s both;
-    animation: out 1s ease-in-out 10s both;
+    -webkit-animation: out 1s ease-in-out 8s both;
+    animation: out 1s ease-in-out 8s both;
     width: 600px;
     height: 600px;
     background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
@@ -406,35 +406,35 @@ button {
 }
 
 .bckgdresto__palette {
+  background-position: center;
   background-size: cover;
   width: 100%;
   height: 400px;
-  background-position: center;
   background-image: url(palette.jpg);
 }
 
 .bckgdresto__note {
   background-image: url(note.jpg);
+  background-position: center;
   background-size: cover;
   width: 100%;
   height: 400px;
-  background-position: center;
 }
 
 .bckgdresto__délice {
+  background-image: url(délice.jpg);
   background-position: center;
   background-size: cover;
   width: 100%;
   height: 400px;
-  background-image: url(délice.jpg);
 }
 
 .bckgdresto__française {
+  background-image: url(française.jpg);
   background-position: center;
   background-size: cover;
   width: 100%;
   height: 400px;
-  background-image: url(française.jpg);
 }
 
 img {
@@ -919,9 +919,10 @@ section .menu > span.desserts > .border {
 }
 
 section .menu > span .border {
+  display: block;
   background-color: #99E2D0;
   height: 3px;
-  width: 2.5em;
+  width: 1.5em;
   -webkit-animation: category 1s cubic-bezier(0.9, -0.37, 0.11, -1.04);
           animation: category 1s cubic-bezier(0.9, -0.37, 0.11, -1.04);
 }
@@ -973,7 +974,7 @@ section .menu li a {
 section .menu li a > div {
   width: 80%;
   text-overflow: ellipsis;
-  overflow: clip;
+  overflow: hidden;
   white-space: nowrap;
 }
 
@@ -1034,13 +1035,13 @@ section .menu li .plats {
   padding: 15px 10px 6px;
   height: 23px;
   text-overflow: ellipsis;
-  overflow: clip;
+  overflow: hidden;
   white-space: nowrap;
 }
 
 section .menu li .plats + p {
   text-overflow: ellipsis;
-  overflow: clip;
+  overflow: hidden;
   white-space: nowrap;
 }
 

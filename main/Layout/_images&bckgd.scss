@@ -24,8 +24,8 @@
 }
 .bckgdresto{
     &__palette{
-        background-image: url(palette.jpg);
         @include bckgdresto;
+        background-image: url(palette.jpg);
     }&__note{
         background-image: url(note.jpg);
         @include bckgdresto;

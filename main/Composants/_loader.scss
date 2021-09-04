@@ -11,8 +11,8 @@
     @include desktop{
     display: block;
     z-index: 1;
-    -webkit-animation: out 1s ease-in-out 10s both;
-    animation: out 1s ease-in-out 10s both;
+    -webkit-animation: out 1s ease-in-out 8s both;
+    animation: out 1s ease-in-out 8s both;
     width:600px;
     height: 600px;
     background: linear-gradient(to top left,map-get($color,1er),map-get($color,2m));   
