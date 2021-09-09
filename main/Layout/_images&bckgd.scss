@@ -19,21 +19,24 @@
     }
     &--délice{
     @include bckgd;
-    background-image: url(délice.jpg);
+    background-image: url(Délice.jpg);
     }
 }
 .bckgdresto{
     &__palette{
         @include bckgdresto;
-        background-image: url(palette.jpg);
-    }&__note{
-        background-image: url(note.jpg);
+        background-image: url(Palette.jpg);
+    }
+    &__note{
+        background-image: url(Note.jpg);
         @include bckgdresto;
-    }&__délice{
-        background-image: url(délice.jpg);
+    }
+    &__délice{
+        background-image: url(Délice.jpg);
         @include bckgdresto;
-    }&__française{
-        background-image: url(française.jpg);
+    }
+    &__française{
+        background-image: url(Française.jpg);
         @include bckgdresto;
     }
 }
