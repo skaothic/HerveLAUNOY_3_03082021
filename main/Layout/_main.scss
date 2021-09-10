@@ -70,6 +70,48 @@ section{
             @include button;
             margin:60px 20% 80px;
         }
+        .desktop{
+            @include desktop{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%;
+            }
+            .category{
+                @include desktop{
+                    width: 30%;
+                }
+            }
+            .cat{
+                display: inline-block;
+                margin-left:40px;
+                animation: category 1s ease-in-out both;
+                @include desktop{
+                    align-self: flex-start;
+                    margin-left:30%;
+                }
+                &.plat{
+                    animation-delay: 2s;
+                    >.border{
+                       animation-delay: 2s; 
+                    }
+                }
+                &.desserts{
+                    animation-delay: 4s;
+                    >.border{
+                        animation-delay: 4s;
+                    }
+                }
+                .border{
+                    display: block;
+                    background-color: map-get($color,3m);
+                    height: 3px;
+                    margin-top: 0.1em;
+                    width: 1.5em;
+                    animation: category 1s cubic-bezier(0.9,-0.37, 0.11,-1.04) ;
+                }
+        }
+    }
         h1{
         padding:35px 0;
         margin-left: 40px;
@@ -84,39 +126,12 @@ section{
             width: 60%;
         }
         }
-        >span{
-        display: inline-block;
-        margin-left:40px;
-        animation: category 1s ease-in-out both;
-        @include desktop{
-            align-self: flex-start;
-            margin-left:30%;
-        }
-        &.plat{
-            animation-delay: 2s;
-            >.border{
-               animation-delay: 2s; 
-            }
-        }
-        &.desserts{
-            animation-delay: 4s;
-            >.border{
-                animation-delay: 4s;
-            }
-        }
-        .border{
-            display: block;
-            background-color: map-get($color,3m);
-            height: 3px;
-            width: 1.5em;
-            animation: category 1s cubic-bezier(0.9,-0.37, 0.11,-1.04) ;
-        }
-
-    }
-    >ul{
+    ul{
         width: 90%;
+        margin:auto;
+        padding: 0;
         @include desktop{
-            width: 40%;
+            width: 100%;
         }    
     }
     li{
@@ -125,6 +140,7 @@ section{
         border-radius: $radius;
         @include shadow;
         animation: food 3s ease 1s both;
+        overflow: hidden;
         &.plat{
             animation-delay: 3s;
         }
@@ -148,13 +164,12 @@ section{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                height: 75px;
-                width: 0%;            
+                height: 100%;
+                width: 0%;
                 color:white;
                 font-weight: 600;
                 background-color:map-get($color,3m);
                 font-size:1.5em;
-                border-radius: 0 $radius $radius 0;
                 transition:width .8s;
                 >.fa-check-circle{
                     height: fit-content;

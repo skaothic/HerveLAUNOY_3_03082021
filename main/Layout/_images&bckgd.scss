@@ -1,42 +1,42 @@
 .carte__bckgd{
     &--palette{
     @include bckgd;
-    background-image:url(Palette.jpg);
+    background-image: url(images/palette.jpg);
     display: flex;
     justify-content: flex-end;
     background-position:10%;
     }
     &--note{
     @include bckgd;
-    background-image: url(Note.jpg);
+    background-image: url(images/note.jpg);
     background-position:40%;
     display: flex;
     justify-content: flex-end
     }
     &--française{
     @include bckgd;
-    background-image: url(Française.jpg);    
-    }
+    background-image: url(images/francaise.jpg);
+}
     &--délice{
     @include bckgd;
-    background-image: url(Délice.jpg);
-    }
+    background-image: url(images/delice.jpg);
+}
 }
 .bckgdresto{
     &__palette{
         @include bckgdresto;
-        background-image: url(Palette.jpg);
+        background-image: url(images/palette.jpg);
     }
     &__note{
-        background-image: url(Note.jpg);
+        background-image: url(images/note.jpg);
         @include bckgdresto;
     }
     &__délice{
-        background-image: url(Délice.jpg);
+        background-image: url(images/delice.jpg);
         @include bckgdresto;
     }
     &__française{
-        background-image: url(Française.jpg);
+        background-image: url(images/francaise.jpg);
         @include bckgdresto;
     }
 }

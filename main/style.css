@@ -147,7 +147,7 @@ h1 {
   -webkit-margin-after: 0;
           margin-block-end: 0;
   font-weight: 100;
-  font-size: 2.2em;
+  font-size: 2.4em;
 }
 
 @media screen and (min-width: 1024px) {
@@ -170,12 +170,12 @@ h2.header__titre {
 }
 
 .plats {
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-weight: 500;
 }
 
 .prix {
-  font-size: 1.20em;
+  font-size: 1.4em;
   font-weight: 600;
 }
 
@@ -222,8 +222,8 @@ a:hover {
 }
 
 button {
-  font-size: 1em;
-  font-weight: 600;
+  font-size: 1.2em;
+  font-weight: 400;
 }
 
 li {
@@ -239,8 +239,12 @@ li.li > span {
   font-size: 1.25em;
 }
 
+.li__foot {
+  font-size: 1.25em;
+}
+
 p {
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 300;
   -webkit-margin-before: 0;
           margin-block-start: 0;
@@ -359,9 +363,9 @@ button {
   background-size: cover;
   background-position: center 65%;
   width: 100%;
-  height: 250px;
+  height: 200px;
   border-radius: 20px 20px 0 0;
-  background-image: url(Palette.jpg);
+  background-image: url(images/palette.jpg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,9 +379,9 @@ button {
   background-size: cover;
   background-position: center 65%;
   width: 100%;
-  height: 250px;
+  height: 200px;
   border-radius: 20px 20px 0 0;
-  background-image: url(Note.jpg);
+  background-image: url(images/note.jpg);
   background-position: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -391,50 +395,50 @@ button {
   background-size: cover;
   background-position: center 65%;
   width: 100%;
-  height: 250px;
+  height: 200px;
   border-radius: 20px 20px 0 0;
-  background-image: url(Française.jpg);
+  background-image: url(images/francaise.jpg);
 }
 
 .carte__bckgd--délice {
   background-size: cover;
   background-position: center 65%;
   width: 100%;
-  height: 250px;
+  height: 200px;
   border-radius: 20px 20px 0 0;
-  background-image: url(Délice.jpg);
+  background-image: url(images/delice.jpg);
 }
 
 .bckgdresto__palette {
   background-size: cover;
   background-position: center 65%;
   width: 100%;
-  height: 400px;
-  background-image: url(Palette.jpg);
+  height: 380px;
+  background-image: url(images/palette.jpg);
 }
 
 .bckgdresto__note {
-  background-image: url(Note.jpg);
+  background-image: url(images/note.jpg);
   background-size: cover;
   background-position: center 65%;
   width: 100%;
-  height: 400px;
+  height: 380px;
 }
 
 .bckgdresto__délice {
-  background-image: url(Délice.jpg);
+  background-image: url(images/delice.jpg);
   background-size: cover;
   background-position: center 65%;
   width: 100%;
-  height: 400px;
+  height: 380px;
 }
 
 .bckgdresto__française {
-  background-image: url(Française.jpg);
+  background-image: url(images/francaise.jpg);
   background-size: cover;
   background-position: center 65%;
   width: 100%;
-  height: 400px;
+  height: 380px;
 }
 
 img {
@@ -829,6 +833,73 @@ section .menu button:hover {
           transform: scale(1);
 }
 
+@media screen and (min-width: 1024px) {
+  section .menu .desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  section .menu .desktop .category {
+    width: 30%;
+  }
+}
+
+section .menu .desktop .cat {
+  display: inline-block;
+  margin-left: 40px;
+  -webkit-animation: category 1s ease-in-out both;
+          animation: category 1s ease-in-out both;
+}
+
+@media screen and (min-width: 1024px) {
+  section .menu .desktop .cat {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-left: 30%;
+  }
+}
+
+section .menu .desktop .cat.plat {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+section .menu .desktop .cat.plat > .border {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+section .menu .desktop .cat.desserts {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+section .menu .desktop .cat.desserts > .border {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+section .menu .desktop .cat .border {
+  display: block;
+  background-color: #99E2D0;
+  height: 3px;
+  margin-top: 0.1em;
+  width: 1.5em;
+  -webkit-animation: category 1s cubic-bezier(0.9, -0.37, 0.11, -1.04);
+          animation: category 1s cubic-bezier(0.9, -0.37, 0.11, -1.04);
+}
+
 section .menu h1 {
   padding: 35px 0;
   margin-left: 40px;
@@ -883,57 +954,15 @@ section .menu__title .unliked:hover + .liked {
   }
 }
 
-section .menu > span {
-  display: inline-block;
-  margin-left: 40px;
-  -webkit-animation: category 1s ease-in-out both;
-          animation: category 1s ease-in-out both;
-}
-
-@media screen and (min-width: 1024px) {
-  section .menu > span {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-    margin-left: 30%;
-  }
-}
-
-section .menu > span.plat {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-
-section .menu > span.plat > .border {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-
-section .menu > span.desserts {
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-}
-
-section .menu > span.desserts > .border {
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-}
-
-section .menu > span .border {
-  display: block;
-  background-color: #99E2D0;
-  height: 3px;
-  width: 1.5em;
-  -webkit-animation: category 1s cubic-bezier(0.9, -0.37, 0.11, -1.04);
-          animation: category 1s cubic-bezier(0.9, -0.37, 0.11, -1.04);
-}
-
-section .menu > ul {
+section .menu ul {
   width: 90%;
+  margin: auto;
+  padding: 0;
 }
 
 @media screen and (min-width: 1024px) {
-  section .menu > ul {
-    width: 40%;
+  section .menu ul {
+    width: 100%;
   }
 }
 
@@ -945,6 +974,7 @@ section .menu li {
           box-shadow: 10px 10px 10px #dddddd;
   -webkit-animation: food 3s ease 1s both;
           animation: food 3s ease 1s both;
+  overflow: hidden;
 }
 
 section .menu li.plat {
@@ -988,13 +1018,12 @@ section .menu li a .far {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 75px;
+  height: 100%;
   width: 0%;
   color: white;
   font-weight: 600;
   background-color: #99E2D0;
   font-size: 1.5em;
-  border-radius: 0 20px 20px 0;
   -webkit-transition: width .8s;
   transition: width .8s;
 }
