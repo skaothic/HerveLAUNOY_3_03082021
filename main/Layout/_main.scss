@@ -56,6 +56,8 @@
 }
 /*pages resto*/
 section{
+    max-width: 1900px;
+    margin: 0 auto;
     width: 100%;
     .menu{
     background-color: map-get($color,bckgd);
@@ -75,7 +77,8 @@ section{
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
-            width: 100%;
+            width: 10%;
+            max-width: 1900px;
             }
             .category{
                 @include desktop{
@@ -153,7 +156,7 @@ section{
         a{
             display: flex;
             justify-content: space-between;
-            height: 75px;
+            height: 75px;l
             >div{
                 width: 90%;
                 text-overflow: ellipsis;

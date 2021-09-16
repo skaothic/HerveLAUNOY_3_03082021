@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @-webkit-keyframes fadein {
   0% {
     opacity: 0;
@@ -7,6 +6,7 @@
     opacity: 1;
   }
 }
+
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -391,7 +391,7 @@ button {
           justify-content: flex-end;
 }
 
-.carte__bckgd--française {
+.carte__bckgd--francaise {
   background-size: cover;
   background-position: center 65%;
   width: 100%;
@@ -400,7 +400,7 @@ button {
   background-image: url(images/francaise.jpg);
 }
 
-.carte__bckgd--délice {
+.carte__bckgd--delice {
   background-size: cover;
   background-position: center 65%;
   width: 100%;
@@ -425,7 +425,7 @@ button {
   height: 380px;
 }
 
-.bckgdresto__délice {
+.bckgdresto__delice {
   background-image: url(images/delice.jpg);
   background-size: cover;
   background-position: center 65%;
@@ -433,7 +433,7 @@ button {
   height: 380px;
 }
 
-.bckgdresto__française {
+.bckgdresto__francaise {
   background-image: url(images/francaise.jpg);
   background-size: cover;
   background-position: center 65%;
@@ -781,6 +781,8 @@ aside .li:hover .li__logo {
 
 /*pages resto*/
 section {
+  max-width: 1900px;
+  margin: 0 auto;
   width: 100%;
 }
 
@@ -845,7 +847,8 @@ section .menu button:hover {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    width: 100%;
+    width: 10%;
+    max-width: 1900px;
   }
 }
 
@@ -1001,7 +1004,8 @@ section .menu li a {
   height: 75px;
 }
 
-section .menu li a > div {
+section .menu li a l
+> div {
   width: 90%;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1083,7 +1087,6 @@ footer {
 @media screen and (min-width: 1024px) {
   footer {
     padding-top: 0;
-    padding-bottom: 2%;
   }
 }
 

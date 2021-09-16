@@ -13,11 +13,11 @@
     display: flex;
     justify-content: flex-end
     }
-    &--française{
+    &--francaise{
     @include bckgd;
     background-image: url(images/francaise.jpg);
 }
-    &--délice{
+    &--delice{
     @include bckgd;
     background-image: url(images/delice.jpg);
 }
@@ -31,11 +31,11 @@
         background-image: url(images/note.jpg);
         @include bckgdresto;
     }
-    &__délice{
+    &__delice{
         background-image: url(images/delice.jpg);
         @include bckgdresto;
     }
-    &__française{
+    &__francaise{
         background-image: url(images/francaise.jpg);
         @include bckgdresto;
     }
