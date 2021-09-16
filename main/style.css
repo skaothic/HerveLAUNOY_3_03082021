@@ -847,7 +847,7 @@ section .menu button:hover {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    width: 10%;
+    width: 100%;
     max-width: 1900px;
   }
 }
