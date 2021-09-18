@@ -2,170 +2,185 @@
 <html lang="fr">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="main/style.min.css" />
-  <link rel="icon" sizes="160x160" href="images/logo/fav-icon.png" />
-  <script src="https://kit.fontawesome.com/ee78f38734.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
-    rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <title>OhMyFood</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main/style.css" />
+    <link rel="icon" sizes="160x160" href="images/logo/fav-icon.png" />
+    <script src="https://kit.fontawesome.com/ee78f38734.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <title>OhMyFood</title>
 </head>
 
 <body>
-  <header class="restaurant">
-    <a href="index.html"><i class="fas fa-arrow-left"></i></a>
-    <p class="logoBox Resto">
-      <img src="images/logo/ohmyfood@2x.svg" alt="logoOMyFood" />
-    </p>
-  </header>
-  <section>
-    <div class="bckgdresto__palette"></div>
-    <div class="menu">
-      <div class="menu__title">
-        <h1>La palette du goût</h1>
-        <div class="favorite">
-          <i class="far fa-heart unliked"></i>
-          <i class="fas fa-heart liked"></i>
+    <header class="restaurant">
+        <a href="index.html">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <h1 class="logoBox Resto">
+            <img src="images/logo/ohmyfood@2x.svg" alt="logoOMyFood" />
+        </h1>
+    </header>
+    <div class="content">
+        <div class="bckgdresto__palette"></div>
+        <div class="menu">
+            <div class="menu__title">
+                <p class="rappel">La palette du goût</p>
+                <div class="favorite">
+                    <i class="far fa-heart unliked"></i>
+                    <i class="fas fa-heart liked"></i>
+                </div>
+            </div>
+            <div class="desktop">
+                <div class="category">
+                    <span class="cat entree">ENTRÉES
+              <span class="border"> </span>
+                    </span>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p class="plats">Fricassée d'escargot</p>
+                                    <p>Au piment d'Espelette</p>
+                                </div>
+                                <p class="prix">25€</p>
+                                <span class="far">
+                    <i class="far fa-check-circle"></i>
+                  </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p class="plats">Foie gras de canard mi-cuit</p>
+                                    <p>Et ses copeaux de truffe noire</p>
+                                </div>
+                                <p class="prix">35€</p>
+                                <span class="far">
+                    <i class="far fa-check-circle"></i>
+                  </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p class="plats">Oeuf au plat</p>
+                                    <p>Assaisonné à la truffe sur lit de caviar</p>
+                                </div>
+                                <p class="prix">20€</p>
+                                <span class="far">
+                    <i class="far fa-check-circle"></i>
+                  </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <span class="cat plat">PLATS
+              <span class="border"> </span>
+                    </span>
+                    <ul>
+                        <li class="plat">
+                            <a href="#">
+                                <div>
+                                    <p class="plats">Filet de boeuf aux herbes</p>
+                                    <p>Accompagné de sa ribambelle de légumes</p>
+                                </div>
+                                <p class="prix">40€</p>
+                                <span class="far">
+                    <i class="far fa-check-circle"></i>
+                  </span>
+                            </a>
+                        </li>
+                        <li class="plat">
+                            <a href="#">
+                                <div>
+                                    <p class="plats">Parmentier de queue de boeuf</p>
+                                    <p>À la truffe noire sur sa purée de panais</p>
+                                </div>
+                                <p class="prix">35€</p>
+                                <span class="far">
+                    <i class="far fa-check-circle"></i>
+                  </span>
+                            </a>
+                        </li>
+                        <li class="plat">
+                            <a href="#">
+                                <div>
+                                    <p class="plats">Filet de turbot</p>
+                                    <p>Aux agrumes</p>
+                                </div>
+                                <p class="prix">44€</p>
+                                <span class="far">
+                    <i class="far fa-check-circle"></i>
+                  </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <span class="cat desserts">DESSERTS<span class="border"></span
+            ></span>
+                    <ul>
+                        <li class="dessert">
+                            <a href="#">
+                                <div>
+                                    <p class="plats">Paris-Brest</p>
+                                    <p>Revisité</p>
+                                </div>
+                                <p class="prix">18€</p>
+                                <span class="far"><i class="far fa-check-circle"></i></span>
+                            </a>
+                        </li>
+                        <li class="dessert">
+                            <a href="#">
+                                <div>
+                                    <p class="plats">Macaron au chocolat d'exception</p>
+                                    <p>Et glace à la vanille de Madagascar</p>
+                                </div>
+                                <p class="prix">22€</p>
+                                <span class="far"><i class="far fa-check-circle"></i></span>
+                            </a>
+                        </li>
+                        <li class="dessert">
+                            <a href="#">
+                                <div>
+                                    <p class="plats">Mousse au chocolat</p>
+                                    <p>Au piment d'Espelette et à la truffe noire</p>
+                                </div>
+                                <p class="prix">23€</p>
+                                <span class="far"><i class="far fa-check-circle"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button>Commander</button>
         </div>
-      </div>
-      <div class="desktop">
-        <div class="category">
-          <span class="cat entree">ENTRÉES<span class="border"></span></span>
-          <ul>
-            <li>
-              <a href="#">
-                <div>
-                  <p class="plats">Fricassée d'escargot</p>
-                  <p>Au piment d'Espelette</p>
-                </div>
-                <p class="prix">25€</p>
-                <span class="far"><i class="far fa-check-circle"></i></span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div>
-                  <p class="plats">Foie gras de canard mi-cuit</p>
-                  <p>Et ses copeaux de truffe noire</p>
-                </div>
-                <p class="prix">35€</p>
-                <span class="far"><i class="far fa-check-circle"></i></span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div>
-                  <p class="plats">Oeuf au plat</p>
-                  <p>Assaisonné à la truffe sur lit de caviar</p>
-                </div>
-                <p class="prix">20€</p>
-                <span class="far"><i class="far fa-check-circle"></i></span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="category">
-          <span class="cat plat">PLATS<span class="border"></span></span>
-          <ul>
-            <li class="plat">
-              <a href="#">
-                <div>
-                  <p class="plats">Filet de boeuf aux herbes</p>
-                  <p>Accompagné de sa ribambelle de légumes</p>
-                </div>
-                <p class="prix">40€</p>
-                <span class="far"><i class="far fa-check-circle"></i></span>
-              </a>
-            </li>
-            <li class="plat">
-              <a href="#">
-                <div>
-                  <p class="plats">Parmentier de queue de boeuf</p>
-                  <p>À la truffe noire sur sa purée de panais</p>
-                </div>
-                <p class="prix">35€</p>
-                <span class="far"><i class="far fa-check-circle"></i></span>
-              </a>
-            </li>
-            <li class="plat">
-              <a href="#">
-                <div>
-                  <p class="plats">Filet de turbot</p>
-                  <p>Aux agrumes</p>
-                </div>
-                <p class="prix">44€</p>
-                <span class="far"><i class="far fa-check-circle"></i></span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="category">
-          <span class="cat desserts">DESSERTS<span class="border"></span></span>
-          <ul>
-            <li class="dessert">
-              <a href="#">
-                <div>
-                  <p class="plats">Paris-Brest</p>
-                  <p>Revisité</p>
-                </div>
-                <p class="prix">18€</p>
-                <span class="far"><i class="far fa-check-circle"></i></span>
-              </a>
-            </li>
-            <li class="dessert">
-              <a href="#">
-                <div>
-                  <p class="plats">Macaron au chocolat d'exception</p>
-                  <p>Et glace à la vanille de Madagascar</p>
-                </div>
-                <p class="prix">22€</p>
-                <span class="far"><i class="far fa-check-circle"></i></span>
-              </a>
-            </li>
-            <li class="dessert">
-              <a href="#">
-                <div>
-                  <p class="plats">Mousse au chocolat</p>
-                  <p>Au piment d'Espelette et à la truffe noire</p>
-                </div>
-                <p class="prix">23€</p>
-                <span class="far"><i class="far fa-check-circle"></i></span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <button>Commander</button>
     </div>
-  </section>
-  <footer>
-    <h1>ohmyfood</h1>
-    <ul>
-      <li class="li__foot">
-        <a href="#" class="a__foot">
-          <i class="fas fa-utensils"></i>
-          Proposer un restaurant
-        </a>
-      </li>
-      <li class="li__foot">
-        <a href="#" class="a__foot">
-          <i class="fas fa-hands-helping"></i>
-          Devenir partenaire
-        </a>
-      </li>
-      <li class="li__foot">
-        <a href="#" class="a__foot">Mentions légales</a>
-      </li>
-      <li class="li__foot">
-        <a href="mailto:skaothic@gmail.com" class="a__foot">Contact</a>
-      </li>
-    </ul>
-  </footer>
+    <footer>
+        <p class="rappel">ohmyfood</p>
+        <ul>
+            <li class="li__foot">
+                <a href="#" class="a__foot">
+                    <i class="fas fa-utensils"></i> Proposer un restaurant
+                </a>
+            </li>
+            <li class="li__foot">
+                <a href="#" class="a__foot">
+                    <i class="fas fa-hands-helping"></i> Devenir partenaire
+                </a>
+            </li>
+            <li class="li__foot">
+                <a href="#" class="a__foot">Mentions légales</a>
+            </li>
+            <li class="li__foot">
+                <a href="mailto:skaothic@gmail.com" class="a__foot">Contact</a>
+            </li>
+        </ul>
+    </footer>
 </body>
 
 </html>

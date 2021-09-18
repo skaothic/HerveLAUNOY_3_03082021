@@ -1,211 +1,215 @@
 /*page d'accueil*/
-.main{
-    background-color: map-get($color,bckgd);
+
+.main {
+    background-color: map-get($color, bckgd);
     padding: 45px 0 20px;
-    &__h2{
-        padding-left:30px;
+    &__h2 {
+        padding-left: 30px;
     }
-    &__cartes{
-        padding:0 30px;
-        @include desktop{
-            display:flex;
+    &__cartes {
+        padding: 0 30px;
+        @include desktop {
+            display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
         }
     }
-    @include desktop{
+    @include desktop {
         background-color: white;
         padding-top: 10px;
     }
-    .carte{
+    .carte {
         @include carte;
-        & a:hover{
-            cursor:url(https://img.icons8.com/fluency/32/000000/restaurant.png),pointer;
+        & a:hover {
+            cursor: url(https://img.icons8.com/fluency/32/000000/restaurant.png), pointer;
         }
-        .new{
+        .new {
             height: fit-content;
-            background-color:map-get($color,3m);
-            padding:5px 15px;
+            background-color: map-get($color, 3m);
+            padding: 5px 15px;
             border-radius: 2px;
-            color:#008766;
+            color: #008766;
             margin: 3% 4%;
         }
-        .desc{
+        .desc {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 5%;
             @include heart;
-                &:hover{
+            &:hover {
                 cursor: pointer;
             }
-            .favorite{
+            .favorite {
                 display: inline-block;
             }
-            .name{
+            .name {
                 margin: 10px 0 5px;
             }
-            .quartier{
+            .quartier {
                 margin-bottom: 10px;
             }
-            .fa-heart{
+            .fa-heart {
                 justify-items: flex-end;
             }
         }
     }
 }
+
+
 /*pages resto*/
-section{
-    max-width: 1900px;
+
+.content {
     margin: 0 auto;
     width: 100%;
-    .menu{
-    background-color: map-get($color,bckgd);
-    border-radius: 60px 60px 0 0 ;
-    margin-top: -60px;
-    @include desktop{
-        display: flex;
-        flex-direction: column;
-        align-items: center
-        }
-        button{
-            @include button;
-            margin:60px 20% 80px;
-        }
-        .desktop{
-            @include desktop{
+    overflow-y: hidden;
+    .menu {
+        background-color: map-get($color, bckgd);
+        border-radius: 60px 60px 0 0;
+        margin-top: -60px;
+        @include desktop {
             display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            width: 100%;
-            max-width: 1900px;
+            flex-direction: column;
+            align-items: center
+        }
+        button {
+            @include button;
+            margin: 60px 20% 80px;
+        }
+        .desktop {
+            @include desktop {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                width: 100%;
+                max-width: 1900px;
             }
-            .category{
-                @include desktop{
+            .category {
+                @include desktop {
                     width: 30%;
                 }
             }
-            .cat{
+            .cat {
                 display: inline-block;
-                margin-left:40px;
+                margin-left: 40px;
                 animation: category 1s ease-in-out both;
-                @include desktop{
+                @include desktop {
                     align-self: flex-start;
-                    margin-left:30%;
+                    margin-left: 30%;
                 }
-                &.plat{
+                &.plat {
                     animation-delay: 2s;
-                    >.border{
-                       animation-delay: 2s; 
+                    >.border {
+                        animation-delay: 2s;
                     }
                 }
-                &.desserts{
+                &.desserts {
                     animation-delay: 4s;
-                    >.border{
+                    >.border {
                         animation-delay: 4s;
                     }
                 }
-                .border{
+                .border {
                     display: block;
-                    background-color: map-get($color,3m);
+                    background-color: map-get($color, 3m);
                     height: 3px;
                     margin-top: 0.1em;
                     width: 1.5em;
-                    animation: category 1s cubic-bezier(0.9,-0.37, 0.11,-1.04) ;
+                    animation: category 1s cubic-bezier(0.9, -0.37, 0.11, -1.04);
                 }
+            }
         }
-    }
-        h1{
-        padding:35px 0;
-        margin-left: 40px;
+        .rappel {
+            padding: 35px 0;
+            margin-left: 40px;
         }
-        &__title{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        @include heart;
-        margin-right: 30px;
-        @include desktop{
-            width: 60%;
-        }
-        }
-    ul{
-        width: 90%;
-        margin:auto;
-        padding: 0;
-        @include desktop{
-            width: 100%;
-        }    
-    }
-    li{
-        background-color: white;
-        margin: 10px 10px 15px 0;
-        border-radius: $radius;
-        @include shadow;
-        animation: food 3s ease 1s both;
-        overflow: hidden;
-        &.plat{
-            animation-delay: 3s;
-        }
-        &.dessert{
-            animation-delay: 5s;
-        }
-        p{
-            padding: 0 10px 10px;
-        }
-        a{
+        &__title {
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            height: 75px;l
-            >div{
-                width: 90%;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;
-            }
-            .far{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100%;
-                width: 0%;
-                color:white;
-                font-weight: 600;
-                background-color:map-get($color,3m);
-                font-size:1.5em;
-                transition:width .8s;
-                >.fa-check-circle{
-                    height: fit-content;
-                    transform: rotate(0) scale(0);
-                    transition: transform .8s;
-                    } 
-            }
-            &:hover{
-                transform: scale(1);
-                & .far{
-                    width: 20%;
-                    .fa-check-circle{
-                        transform: rotate(360deg) scale(1);
-                    }                    
-                }
+            @include heart;
+            margin-right: 30px;
+            @include desktop {
+                width: 60%;
             }
         }
-        .prix{
-            align-self: flex-end;
-            padding: 0 15px 10px;
+        ul {
+            width: 90%;
+            margin: auto;
+            padding: 0;
+            @include desktop {
+                width: 100%;
+            }
         }
-        .plats{
-            padding:15px 10px 6px;
-            height: 23px;
-            text-overflow: ellipsis;
+        li {
+            background-color: white;
+            margin: 10px 10px 15px 0;
+            border-radius: $radius;
+            @include shadow;
+            animation: food 3s ease 1s both;
             overflow: hidden;
-            white-space: nowrap;
-                +p{
+            &.plat {
+                animation-delay: 3s;
+            }
+            &.dessert {
+                animation-delay: 5s;
+            }
+            p {
+                padding: 0 10px 10px;
+            }
+            a {
+                display: flex;
+                justify-content: space-between;
+                height: 75px;
+                >div {
+                    width: 90%;
                     text-overflow: ellipsis;
                     overflow: hidden;
                     white-space: nowrap;
+                }
+                .far {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    width: 0%;
+                    color: white;
+                    font-weight: 600;
+                    background-color: map-get($color, 3m);
+                    font-size: 1.5em;
+                    transition: width .8s;
+                    >.fa-check-circle {
+                        height: fit-content;
+                        transform: rotate(0) scale(0);
+                        transition: transform .8s;
                     }
+                }
+                &:hover {
+                    transform: scale(1);
+                    & .far {
+                        width: 20%;
+                        .fa-check-circle {
+                            transform: rotate(360deg) scale(1);
+                        }
+                    }
+                }
+            }
+            .prix {
+                align-self: flex-end;
+                padding: 0 15px 10px;
+            }
+            .plats {
+                padding: 15px 10px 6px;
+                height: 23px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                +p {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+            }
         }
     }
-}
 }

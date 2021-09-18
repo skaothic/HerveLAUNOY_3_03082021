@@ -2,10 +2,11 @@ footer{
     background-color: map-get($color,colfoot);
     color:white;
     padding:6%;
+    height: fit-content;
     @include desktop{
-        padding-top:0;
+        padding: 1% 6% 3%;
     }
-    h1{
+    .rappel{
         @include desktop{
             text-align: center;
         }

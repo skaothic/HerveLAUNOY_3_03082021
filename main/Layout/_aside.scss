@@ -7,20 +7,26 @@ aside{
     }
     ul{
         margin: 10px 0px 35px;
+        padding-inline-start: 0px;
         @include desktop{
+            width: 100%;
             display: flex;
+            justify-content: space-around;
             }
         
     }
     .li{
         background:map-get($color,bckgd);
-        margin:20px 15px;
+        margin:20px;
+        margin-left: 25px;
         display: flex;
         align-items: center;
         border-radius:$radius;
-        width: 90%;
         padding: 25px 0;
         @include shadow;
+        @include desktop{
+            width:30%
+        }
         &__logo{
             margin-right:25px;
             width: 15px;

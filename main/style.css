@@ -140,7 +140,7 @@
   font-family: roboto;
 }
 
-h1 {
+h1, .rappel {
   font-family: Shrikhand;
   -webkit-margin-before: 0;
           margin-block-start: 0;
@@ -151,7 +151,7 @@ h1 {
 }
 
 @media screen and (min-width: 1024px) {
-  h1 {
+  h1, .rappel {
     font-size: 3.5em;
   }
 }
@@ -593,19 +593,25 @@ aside h2 {
 
 aside ul {
   margin: 10px 0px 35px;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
 }
 
 @media screen and (min-width: 1024px) {
   aside ul {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
 aside .li {
   background: #f6f6f6;
-  margin: 20px 15px;
+  margin: 20px;
+  margin-left: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -613,10 +619,15 @@ aside .li {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 20px;
-  width: 90%;
   padding: 25px 0;
   -webkit-box-shadow: 10px 10px 10px #dddddd;
           box-shadow: 10px 10px 10px #dddddd;
+}
+
+@media screen and (min-width: 1024px) {
+  aside .li {
+    width: 30%;
+  }
 }
 
 aside .li__logo {
@@ -780,20 +791,20 @@ aside .li:hover .li__logo {
 }
 
 /*pages resto*/
-section {
-  max-width: 1900px;
+.content {
   margin: 0 auto;
   width: 100%;
+  overflow-y: hidden;
 }
 
-section .menu {
+.content .menu {
   background-color: #f6f6f6;
   border-radius: 60px 60px 0 0;
   margin-top: -60px;
 }
 
 @media screen and (min-width: 1024px) {
-  section .menu {
+  .content .menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -807,7 +818,7 @@ section .menu {
   }
 }
 
-section .menu button {
+.content .menu button {
   width: 60%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -821,12 +832,12 @@ section .menu button {
 }
 
 @media screen and (min-width: 1024px) {
-  section .menu button {
+  .content .menu button {
     width: 30%;
   }
 }
 
-section .menu button:hover {
+.content .menu button:hover {
   background-color: #ae80e5;
   -webkit-box-shadow: #fface8 30px 30px 50px inset, 10px 10px 10px #aaaaaa;
           box-shadow: #fface8 30px 30px 50px inset, 10px 10px 10px #aaaaaa;
@@ -836,7 +847,7 @@ section .menu button:hover {
 }
 
 @media screen and (min-width: 1024px) {
-  section .menu .desktop {
+  .content .menu .desktop {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -853,12 +864,12 @@ section .menu button:hover {
 }
 
 @media screen and (min-width: 1024px) {
-  section .menu .desktop .category {
+  .content .menu .desktop .category {
     width: 30%;
   }
 }
 
-section .menu .desktop .cat {
+.content .menu .desktop .cat {
   display: inline-block;
   margin-left: 40px;
   -webkit-animation: category 1s ease-in-out both;
@@ -866,34 +877,34 @@ section .menu .desktop .cat {
 }
 
 @media screen and (min-width: 1024px) {
-  section .menu .desktop .cat {
+  .content .menu .desktop .cat {
     -ms-flex-item-align: start;
         align-self: flex-start;
     margin-left: 30%;
   }
 }
 
-section .menu .desktop .cat.plat {
+.content .menu .desktop .cat.plat {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
 
-section .menu .desktop .cat.plat > .border {
+.content .menu .desktop .cat.plat > .border {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
 
-section .menu .desktop .cat.desserts {
+.content .menu .desktop .cat.desserts {
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
 }
 
-section .menu .desktop .cat.desserts > .border {
+.content .menu .desktop .cat.desserts > .border {
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
 }
 
-section .menu .desktop .cat .border {
+.content .menu .desktop .cat .border {
   display: block;
   background-color: #99E2D0;
   height: 3px;
@@ -903,12 +914,12 @@ section .menu .desktop .cat .border {
           animation: category 1s cubic-bezier(0.9, -0.37, 0.11, -1.04);
 }
 
-section .menu h1 {
+.content .menu .rappel {
   padding: 35px 0;
   margin-left: 40px;
 }
 
-section .menu__title {
+.content .menu__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -921,7 +932,7 @@ section .menu__title {
   margin-right: 30px;
 }
 
-section .menu__title .unliked {
+.content .menu__title .unliked {
   opacity: 1;
   -webkit-transition: opacity .5s;
   transition: opacity .5s;
@@ -929,18 +940,18 @@ section .menu__title .unliked {
   position: absolute;
 }
 
-section .menu__title .liked {
+.content .menu__title .liked {
   background: transparent;
   color: transparent;
   font-size: 40px;
 }
 
-section .menu__title .unliked:hover {
+.content .menu__title .unliked:hover {
   opacity: 0;
   color: #9356DC;
 }
 
-section .menu__title .unliked:hover + .liked {
+.content .menu__title .unliked:hover + .liked {
   background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   background-clip: text;
@@ -952,24 +963,24 @@ section .menu__title .unliked:hover + .liked {
 }
 
 @media screen and (min-width: 1024px) {
-  section .menu__title {
+  .content .menu__title {
     width: 60%;
   }
 }
 
-section .menu ul {
+.content .menu ul {
   width: 90%;
   margin: auto;
   padding: 0;
 }
 
 @media screen and (min-width: 1024px) {
-  section .menu ul {
+  .content .menu ul {
     width: 100%;
   }
 }
 
-section .menu li {
+.content .menu li {
   background-color: white;
   margin: 10px 10px 15px 0;
   border-radius: 20px;
@@ -980,21 +991,21 @@ section .menu li {
   overflow: hidden;
 }
 
-section .menu li.plat {
+.content .menu li.plat {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }
 
-section .menu li.dessert {
+.content .menu li.dessert {
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
 }
 
-section .menu li p {
+.content .menu li p {
   padding: 0 10px 10px;
 }
 
-section .menu li a {
+.content .menu li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1004,15 +1015,14 @@ section .menu li a {
   height: 75px;
 }
 
-section .menu li a l
-> div {
+.content .menu li a > div {
   width: 90%;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-section .menu li a .far {
+.content .menu li a .far {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1032,7 +1042,7 @@ section .menu li a .far {
   transition: width .8s;
 }
 
-section .menu li a .far > .fa-check-circle {
+.content .menu li a .far > .fa-check-circle {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -1044,27 +1054,27 @@ section .menu li a .far > .fa-check-circle {
   transition: transform .8s, -webkit-transform .8s;
 }
 
-section .menu li a:hover {
+.content .menu li a:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-section .menu li a:hover .far {
+.content .menu li a:hover .far {
   width: 20%;
 }
 
-section .menu li a:hover .far .fa-check-circle {
+.content .menu li a:hover .far .fa-check-circle {
   -webkit-transform: rotate(360deg) scale(1);
           transform: rotate(360deg) scale(1);
 }
 
-section .menu li .prix {
+.content .menu li .prix {
   -ms-flex-item-align: end;
       align-self: flex-end;
   padding: 0 15px 10px;
 }
 
-section .menu li .plats {
+.content .menu li .plats {
   padding: 15px 10px 6px;
   height: 23px;
   text-overflow: ellipsis;
@@ -1072,7 +1082,7 @@ section .menu li .plats {
   white-space: nowrap;
 }
 
-section .menu li .plats + p {
+.content .menu li .plats + p {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -1082,16 +1092,19 @@ footer {
   background-color: #353535;
   color: white;
   padding: 6%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 @media screen and (min-width: 1024px) {
   footer {
-    padding-top: 0;
+    padding: 1% 6% 3%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  footer h1 {
+  footer .rappel {
     text-align: center;
   }
 }
@@ -1130,6 +1143,7 @@ footer ul .fas {
 body {
   margin: 0;
   font-size: 14px;
+  overflow-x: hidden;
 }
 
 @media screen and (min-width: 1024px) {
